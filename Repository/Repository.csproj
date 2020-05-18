@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Eli.ColoringDiary.Repository</AssemblyName>
+    <RootNamespace>Eli.ColoringDiary.Repository</RootNamespace>
+  </PropertyGroup>
+
+</Project>
