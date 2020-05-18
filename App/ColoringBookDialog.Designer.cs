@@ -56,12 +56,12 @@
 			this.tableLayoutPanel1.Controls.Add(this.coloringBookDialogAuthorTb, 1, 1);
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 4;
+			this.tableLayoutPanel1.RowCount = 3;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(326, 76);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(327, 76);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
 			// coloringBookDialogNameLbl
@@ -92,7 +92,7 @@
 			this.coloringBookDialogPagesTotalLbl.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.coloringBookDialogPagesTotalLbl.Location = new System.Drawing.Point(3, 50);
 			this.coloringBookDialogPagesTotalLbl.Name = "coloringBookDialogPagesTotalLbl";
-			this.coloringBookDialogPagesTotalLbl.Size = new System.Drawing.Size(94, 25);
+			this.coloringBookDialogPagesTotalLbl.Size = new System.Drawing.Size(94, 26);
 			this.coloringBookDialogPagesTotalLbl.TabIndex = 2;
 			this.coloringBookDialogPagesTotalLbl.Text = "Pages Total";
 			this.coloringBookDialogPagesTotalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,7 +102,7 @@
 			this.coloringBookDialogNameTb.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.coloringBookDialogNameTb.Location = new System.Drawing.Point(103, 3);
 			this.coloringBookDialogNameTb.Name = "coloringBookDialogNameTb";
-			this.coloringBookDialogNameTb.Size = new System.Drawing.Size(220, 20);
+			this.coloringBookDialogNameTb.Size = new System.Drawing.Size(221, 20);
 			this.coloringBookDialogNameTb.TabIndex = 3;
 			// 
 			// coloringBookDialogPagesTotalNud
@@ -110,7 +110,7 @@
 			this.coloringBookDialogPagesTotalNud.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.coloringBookDialogPagesTotalNud.Location = new System.Drawing.Point(103, 53);
 			this.coloringBookDialogPagesTotalNud.Name = "coloringBookDialogPagesTotalNud";
-			this.coloringBookDialogPagesTotalNud.Size = new System.Drawing.Size(220, 20);
+			this.coloringBookDialogPagesTotalNud.Size = new System.Drawing.Size(221, 20);
 			this.coloringBookDialogPagesTotalNud.TabIndex = 4;
 			// 
 			// coloringBookDialogAuthorTb
@@ -118,13 +118,13 @@
 			this.coloringBookDialogAuthorTb.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.coloringBookDialogAuthorTb.Location = new System.Drawing.Point(103, 28);
 			this.coloringBookDialogAuthorTb.Name = "coloringBookDialogAuthorTb";
-			this.coloringBookDialogAuthorTb.Size = new System.Drawing.Size(220, 20);
+			this.coloringBookDialogAuthorTb.Size = new System.Drawing.Size(221, 20);
 			this.coloringBookDialogAuthorTb.TabIndex = 5;
 			// 
 			// coloringBookDialogSaveBtn
 			// 
 			this.coloringBookDialogSaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.coloringBookDialogSaveBtn.Location = new System.Drawing.Point(263, 96);
+			this.coloringBookDialogSaveBtn.Location = new System.Drawing.Point(264, 96);
 			this.coloringBookDialogSaveBtn.Name = "coloringBookDialogSaveBtn";
 			this.coloringBookDialogSaveBtn.Size = new System.Drawing.Size(75, 23);
 			this.coloringBookDialogSaveBtn.TabIndex = 1;
@@ -135,7 +135,7 @@
 			// 
 			this.coloringBookDialogCancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.coloringBookDialogCancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.coloringBookDialogCancelBtn.Location = new System.Drawing.Point(182, 96);
+			this.coloringBookDialogCancelBtn.Location = new System.Drawing.Point(183, 96);
 			this.coloringBookDialogCancelBtn.MinimumSize = new System.Drawing.Size(75, 23);
 			this.coloringBookDialogCancelBtn.Name = "coloringBookDialogCancelBtn";
 			this.coloringBookDialogCancelBtn.Size = new System.Drawing.Size(75, 23);
@@ -149,7 +149,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.coloringBookDialogCancelBtn;
-			this.ClientSize = new System.Drawing.Size(350, 154);
+			this.ClientSize = new System.Drawing.Size(351, 131);
 			this.ControlBox = false;
 			this.Controls.Add(this.coloringBookDialogCancelBtn);
 			this.Controls.Add(this.coloringBookDialogSaveBtn);

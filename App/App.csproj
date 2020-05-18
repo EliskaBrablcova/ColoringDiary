@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColoringBookDetailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColoringBookDetailDialog.Designer.cs">
+      <DependentUpon>ColoringBookDetailDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ColoringBookDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ColoringBookDetail.resx">
       <DependentUpon>ColoringBookDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColoringBookDetailDialog.resx">
+      <DependentUpon>ColoringBookDetailDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColoringBookDialog.resx">
       <DependentUpon>ColoringBookDialog.cs</DependentUpon>
