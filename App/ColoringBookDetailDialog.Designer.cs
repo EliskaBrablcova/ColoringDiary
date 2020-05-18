@@ -220,8 +220,10 @@
 			// 
 			// ColoringBookDetailDialog
 			// 
+			this.AcceptButton = this.coloringBookDetailDialogSaveBtn;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.coloringBookDetailDialogCancelBtn;
 			this.ClientSize = new System.Drawing.Size(452, 202);
 			this.ControlBox = false;
 			this.Controls.Add(this.coloringBookDetailDialogTlp);

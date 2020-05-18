@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArtSuppliesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArtSuppliesDialog.Designer.cs">
+      <DependentUpon>ArtSuppliesDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ColoringBookDetailDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ArtSuppliesDialog.resx">
+      <DependentUpon>ArtSuppliesDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ColoringBookDetail.resx">
       <DependentUpon>ColoringBookDetail.cs</DependentUpon>
     </EmbeddedResource>
