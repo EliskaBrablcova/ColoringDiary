@@ -155,6 +155,7 @@
 			this.Controls.Add(this.coloringBookDialogSaveBtn);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.MinimumSize = new System.Drawing.Size(366, 170);
 			this.Name = "ColoringBookDialog";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "ColoringBookDialog";
