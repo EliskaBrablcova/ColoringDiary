@@ -109,8 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="coloringBookDetail.png" />
+    <Content Include="coloringDiary.png" />
     <Content Include="coloringDiaryIcon.ico" />
-    <Content Include="coloringDiaryLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

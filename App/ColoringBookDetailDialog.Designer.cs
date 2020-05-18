@@ -32,6 +32,7 @@
 			this.coloringBookDetailDialogSaveBtn = new System.Windows.Forms.Button();
 			this.coloringBookDetailDialogCancelBtn = new System.Windows.Forms.Button();
 			this.coloringBookDetailDialogTlp = new System.Windows.Forms.TableLayoutPanel();
+			this.coloringBookDetailDialogNoteTB = new System.Windows.Forms.TextBox();
 			this.coloringBookDetailDialogPageNumberLbl = new System.Windows.Forms.Label();
 			this.coloringBookDetailDialogPageDescriptionLbl = new System.Windows.Forms.Label();
 			this.coloringBookDetailDialogNoteLbl = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
 			this.coloringBookDetailDialogFinnishDateDtp = new System.Windows.Forms.DateTimePicker();
 			this.coloringBookDetailDialogPageNumberNud = new System.Windows.Forms.NumericUpDown();
 			this.coloringBookDetailDialogPageDescriptionTB = new System.Windows.Forms.TextBox();
-			this.coloringBookDetailDialogNoteTB = new System.Windows.Forms.TextBox();
 			this.coloringBookDetailDialogArtSuplliesClb = new System.Windows.Forms.CheckedListBox();
 			this.coloringBookDetailDialogTlp.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.coloringBookDetailDialogPageNumberNud)).BeginInit();
@@ -102,6 +102,14 @@
 			this.coloringBookDetailDialogTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.coloringBookDetailDialogTlp.Size = new System.Drawing.Size(428, 149);
 			this.coloringBookDetailDialogTlp.TabIndex = 4;
+			// 
+			// coloringBookDetailDialogNoteTB
+			// 
+			this.coloringBookDetailDialogNoteTB.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.coloringBookDetailDialogNoteTB.Location = new System.Drawing.Point(103, 53);
+			this.coloringBookDetailDialogNoteTB.Name = "coloringBookDetailDialogNoteTB";
+			this.coloringBookDetailDialogNoteTB.Size = new System.Drawing.Size(322, 20);
+			this.coloringBookDetailDialogNoteTB.TabIndex = 10;
 			// 
 			// coloringBookDetailDialogPageNumberLbl
 			// 
@@ -200,14 +208,6 @@
 			this.coloringBookDetailDialogPageDescriptionTB.Name = "coloringBookDetailDialogPageDescriptionTB";
 			this.coloringBookDetailDialogPageDescriptionTB.Size = new System.Drawing.Size(322, 20);
 			this.coloringBookDetailDialogPageDescriptionTB.TabIndex = 9;
-			// 
-			// coloringBookDetailDialogNoteTB
-			// 
-			this.coloringBookDetailDialogNoteTB.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.coloringBookDetailDialogNoteTB.Location = new System.Drawing.Point(103, 53);
-			this.coloringBookDetailDialogNoteTB.Name = "coloringBookDetailDialogNoteTB";
-			this.coloringBookDetailDialogNoteTB.Size = new System.Drawing.Size(322, 20);
-			this.coloringBookDetailDialogNoteTB.TabIndex = 10;
 			// 
 			// coloringBookDetailDialogArtSuplliesClb
 			// 

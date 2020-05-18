@@ -32,21 +32,17 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.mainTC = new System.Windows.Forms.TabControl();
 			this.coloringBooksTP = new System.Windows.Forms.TabPage();
-			this.artSuppliesTP = new System.Windows.Forms.TabPage();
-			this.plannerTP = new System.Windows.Forms.TabPage();
-			this.statisticsTP = new System.Windows.Forms.TabPage();
-			this.wipTP = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.addNewBookBtn = new System.Windows.Forms.Button();
-			this.editBookBtn = new System.Windows.Forms.Button();
 			this.detailBookBtn = new System.Windows.Forms.Button();
 			this.deleteBookBtn = new System.Windows.Forms.Button();
+			this.editBookBtn = new System.Windows.Forms.Button();
+			this.addNewBookBtn = new System.Windows.Forms.Button();
 			this.coloringBooksLv = new System.Windows.Forms.ListView();
 			this.bookNameCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.bookAuthorCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.bookTotalPagesCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.bookTotalPagesColoredCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.versionLbl = new System.Windows.Forms.Label();
+			this.artSuppliesTP = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.addNewSupplyBtn = new System.Windows.Forms.Button();
 			this.editSupplyBtn = new System.Windows.Forms.Button();
@@ -55,11 +51,15 @@
 			this.supplyNameCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.supplyBrandCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.supplyTypeCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.plannerTP = new System.Windows.Forms.TabPage();
+			this.wipTP = new System.Windows.Forms.TabPage();
+			this.statisticsTP = new System.Windows.Forms.TabPage();
+			this.versionLbl = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.mainTC.SuspendLayout();
 			this.coloringBooksTP.SuspendLayout();
-			this.artSuppliesTP.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
+			this.artSuppliesTP.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -103,47 +103,6 @@
 			this.coloringBooksTP.Text = "Coloring Books";
 			this.coloringBooksTP.UseVisualStyleBackColor = true;
 			// 
-			// artSuppliesTP
-			// 
-			this.artSuppliesTP.Controls.Add(this.tableLayoutPanel2);
-			this.artSuppliesTP.Location = new System.Drawing.Point(4, 22);
-			this.artSuppliesTP.Name = "artSuppliesTP";
-			this.artSuppliesTP.Padding = new System.Windows.Forms.Padding(3);
-			this.artSuppliesTP.Size = new System.Drawing.Size(613, 248);
-			this.artSuppliesTP.TabIndex = 1;
-			this.artSuppliesTP.Text = "Art Supplies";
-			this.artSuppliesTP.UseVisualStyleBackColor = true;
-			// 
-			// plannerTP
-			// 
-			this.plannerTP.Location = new System.Drawing.Point(4, 22);
-			this.plannerTP.Name = "plannerTP";
-			this.plannerTP.Padding = new System.Windows.Forms.Padding(3);
-			this.plannerTP.Size = new System.Drawing.Size(768, 244);
-			this.plannerTP.TabIndex = 2;
-			this.plannerTP.Text = "Planner";
-			this.plannerTP.UseVisualStyleBackColor = true;
-			// 
-			// statisticsTP
-			// 
-			this.statisticsTP.Location = new System.Drawing.Point(4, 22);
-			this.statisticsTP.Name = "statisticsTP";
-			this.statisticsTP.Padding = new System.Windows.Forms.Padding(3);
-			this.statisticsTP.Size = new System.Drawing.Size(768, 244);
-			this.statisticsTP.TabIndex = 3;
-			this.statisticsTP.Text = "Statistics";
-			this.statisticsTP.UseVisualStyleBackColor = true;
-			// 
-			// wipTP
-			// 
-			this.wipTP.Location = new System.Drawing.Point(4, 22);
-			this.wipTP.Name = "wipTP";
-			this.wipTP.Padding = new System.Windows.Forms.Padding(3);
-			this.wipTP.Size = new System.Drawing.Size(768, 244);
-			this.wipTP.TabIndex = 4;
-			this.wipTP.Text = "WIP";
-			this.wipTP.UseVisualStyleBackColor = true;
-			// 
 			// tableLayoutPanel1
 			// 
 			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -169,26 +128,6 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(601, 236);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
-			// addNewBookBtn
-			// 
-			this.addNewBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.addNewBookBtn.Location = new System.Drawing.Point(3, 28);
-			this.addNewBookBtn.Name = "addNewBookBtn";
-			this.addNewBookBtn.Size = new System.Drawing.Size(84, 19);
-			this.addNewBookBtn.TabIndex = 0;
-			this.addNewBookBtn.Text = "Add New";
-			this.addNewBookBtn.UseVisualStyleBackColor = true;
-			// 
-			// editBookBtn
-			// 
-			this.editBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.editBookBtn.Location = new System.Drawing.Point(3, 53);
-			this.editBookBtn.Name = "editBookBtn";
-			this.editBookBtn.Size = new System.Drawing.Size(84, 19);
-			this.editBookBtn.TabIndex = 1;
-			this.editBookBtn.Text = "Edit";
-			this.editBookBtn.UseVisualStyleBackColor = true;
-			// 
 			// detailBookBtn
 			// 
 			this.detailBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -208,6 +147,26 @@
 			this.deleteBookBtn.TabIndex = 2;
 			this.deleteBookBtn.Text = "Delete";
 			this.deleteBookBtn.UseVisualStyleBackColor = true;
+			// 
+			// editBookBtn
+			// 
+			this.editBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.editBookBtn.Location = new System.Drawing.Point(3, 53);
+			this.editBookBtn.Name = "editBookBtn";
+			this.editBookBtn.Size = new System.Drawing.Size(84, 19);
+			this.editBookBtn.TabIndex = 1;
+			this.editBookBtn.Text = "Edit";
+			this.editBookBtn.UseVisualStyleBackColor = true;
+			// 
+			// addNewBookBtn
+			// 
+			this.addNewBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.addNewBookBtn.Location = new System.Drawing.Point(3, 28);
+			this.addNewBookBtn.Name = "addNewBookBtn";
+			this.addNewBookBtn.Size = new System.Drawing.Size(84, 19);
+			this.addNewBookBtn.TabIndex = 0;
+			this.addNewBookBtn.Text = "Add New";
+			this.addNewBookBtn.UseVisualStyleBackColor = true;
 			// 
 			// coloringBooksLv
 			// 
@@ -248,15 +207,16 @@
 			this.bookTotalPagesColoredCh.Text = "Total Pages Colored";
 			this.bookTotalPagesColoredCh.Width = 109;
 			// 
-			// versionLbl
+			// artSuppliesTP
 			// 
-			this.versionLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.versionLbl.AutoSize = true;
-			this.versionLbl.Location = new System.Drawing.Point(602, 446);
-			this.versionLbl.Name = "versionLbl";
-			this.versionLbl.Size = new System.Drawing.Size(28, 13);
-			this.versionLbl.TabIndex = 3;
-			this.versionLbl.Text = "v0.1";
+			this.artSuppliesTP.Controls.Add(this.tableLayoutPanel2);
+			this.artSuppliesTP.Location = new System.Drawing.Point(4, 22);
+			this.artSuppliesTP.Name = "artSuppliesTP";
+			this.artSuppliesTP.Padding = new System.Windows.Forms.Padding(3);
+			this.artSuppliesTP.Size = new System.Drawing.Size(613, 248);
+			this.artSuppliesTP.TabIndex = 1;
+			this.artSuppliesTP.Text = "Art Supplies";
+			this.artSuppliesTP.UseVisualStyleBackColor = true;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -344,6 +304,46 @@
 			this.supplyTypeCh.Text = "Type";
 			this.supplyTypeCh.Width = 140;
 			// 
+			// plannerTP
+			// 
+			this.plannerTP.Location = new System.Drawing.Point(4, 22);
+			this.plannerTP.Name = "plannerTP";
+			this.plannerTP.Padding = new System.Windows.Forms.Padding(3);
+			this.plannerTP.Size = new System.Drawing.Size(613, 248);
+			this.plannerTP.TabIndex = 2;
+			this.plannerTP.Text = "Planner";
+			this.plannerTP.UseVisualStyleBackColor = true;
+			// 
+			// wipTP
+			// 
+			this.wipTP.Location = new System.Drawing.Point(4, 22);
+			this.wipTP.Name = "wipTP";
+			this.wipTP.Padding = new System.Windows.Forms.Padding(3);
+			this.wipTP.Size = new System.Drawing.Size(613, 248);
+			this.wipTP.TabIndex = 4;
+			this.wipTP.Text = "WIP";
+			this.wipTP.UseVisualStyleBackColor = true;
+			// 
+			// statisticsTP
+			// 
+			this.statisticsTP.Location = new System.Drawing.Point(4, 22);
+			this.statisticsTP.Name = "statisticsTP";
+			this.statisticsTP.Padding = new System.Windows.Forms.Padding(3);
+			this.statisticsTP.Size = new System.Drawing.Size(613, 248);
+			this.statisticsTP.TabIndex = 3;
+			this.statisticsTP.Text = "Statistics";
+			this.statisticsTP.UseVisualStyleBackColor = true;
+			// 
+			// versionLbl
+			// 
+			this.versionLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.versionLbl.AutoSize = true;
+			this.versionLbl.Location = new System.Drawing.Point(602, 446);
+			this.versionLbl.Name = "versionLbl";
+			this.versionLbl.Size = new System.Drawing.Size(28, 13);
+			this.versionLbl.TabIndex = 3;
+			this.versionLbl.Text = "v0.1";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,8 +359,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.mainTC.ResumeLayout(false);
 			this.coloringBooksTP.ResumeLayout(false);
-			this.artSuppliesTP.ResumeLayout(false);
 			this.tableLayoutPanel1.ResumeLayout(false);
+			this.artSuppliesTP.ResumeLayout(false);
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
