@@ -33,11 +33,11 @@
 			this.artSuppliesDialogNameLbl = new System.Windows.Forms.Label();
 			this.artSuppliesDialogBrandLbl = new System.Windows.Forms.Label();
 			this.artSuppliesDialogTypeLbl = new System.Windows.Forms.Label();
-			this.artSuppliesDialogCancelBtn = new System.Windows.Forms.Button();
-			this.artSuppliesDialogSaveBtn = new System.Windows.Forms.Button();
 			this.artSuppliesDialogNameTB = new System.Windows.Forms.TextBox();
 			this.artSuppliesDialogBrandTB = new System.Windows.Forms.TextBox();
 			this.artSuppliesDialogTypeCB = new System.Windows.Forms.ComboBox();
+			this.artSuppliesDialogCancelBtn = new System.Windows.Forms.Button();
+			this.artSuppliesDialogSaveBtn = new System.Windows.Forms.Button();
 			this.artSuppliesDialogTlp.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -97,28 +97,6 @@
 			this.artSuppliesDialogTypeLbl.Text = "Type";
 			this.artSuppliesDialogTypeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// artSuppliesDialogCancelBtn
-			// 
-			this.artSuppliesDialogCancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.artSuppliesDialogCancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.artSuppliesDialogCancelBtn.Location = new System.Drawing.Point(160, 95);
-			this.artSuppliesDialogCancelBtn.MinimumSize = new System.Drawing.Size(75, 23);
-			this.artSuppliesDialogCancelBtn.Name = "artSuppliesDialogCancelBtn";
-			this.artSuppliesDialogCancelBtn.Size = new System.Drawing.Size(75, 23);
-			this.artSuppliesDialogCancelBtn.TabIndex = 3;
-			this.artSuppliesDialogCancelBtn.Text = "Cancel";
-			this.artSuppliesDialogCancelBtn.UseVisualStyleBackColor = true;
-			// 
-			// artSuppliesDialogSaveBtn
-			// 
-			this.artSuppliesDialogSaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.artSuppliesDialogSaveBtn.Location = new System.Drawing.Point(241, 95);
-			this.artSuppliesDialogSaveBtn.Name = "artSuppliesDialogSaveBtn";
-			this.artSuppliesDialogSaveBtn.Size = new System.Drawing.Size(75, 23);
-			this.artSuppliesDialogSaveBtn.TabIndex = 4;
-			this.artSuppliesDialogSaveBtn.Text = "Save";
-			this.artSuppliesDialogSaveBtn.UseVisualStyleBackColor = true;
-			// 
 			// artSuppliesDialogNameTB
 			// 
 			this.artSuppliesDialogNameTB.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -144,6 +122,28 @@
 			this.artSuppliesDialogTypeCB.Name = "artSuppliesDialogTypeCB";
 			this.artSuppliesDialogTypeCB.Size = new System.Drawing.Size(236, 21);
 			this.artSuppliesDialogTypeCB.TabIndex = 5;
+			// 
+			// artSuppliesDialogCancelBtn
+			// 
+			this.artSuppliesDialogCancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.artSuppliesDialogCancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.artSuppliesDialogCancelBtn.Location = new System.Drawing.Point(160, 95);
+			this.artSuppliesDialogCancelBtn.MinimumSize = new System.Drawing.Size(75, 23);
+			this.artSuppliesDialogCancelBtn.Name = "artSuppliesDialogCancelBtn";
+			this.artSuppliesDialogCancelBtn.Size = new System.Drawing.Size(75, 23);
+			this.artSuppliesDialogCancelBtn.TabIndex = 3;
+			this.artSuppliesDialogCancelBtn.Text = "Cancel";
+			this.artSuppliesDialogCancelBtn.UseVisualStyleBackColor = true;
+			// 
+			// artSuppliesDialogSaveBtn
+			// 
+			this.artSuppliesDialogSaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.artSuppliesDialogSaveBtn.Location = new System.Drawing.Point(241, 95);
+			this.artSuppliesDialogSaveBtn.Name = "artSuppliesDialogSaveBtn";
+			this.artSuppliesDialogSaveBtn.Size = new System.Drawing.Size(75, 23);
+			this.artSuppliesDialogSaveBtn.TabIndex = 4;
+			this.artSuppliesDialogSaveBtn.Text = "Save";
+			this.artSuppliesDialogSaveBtn.UseVisualStyleBackColor = true;
 			// 
 			// ArtSuppliesDialog
 			// 

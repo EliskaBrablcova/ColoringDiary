@@ -32,7 +32,7 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.mainTC = new System.Windows.Forms.TabControl();
 			this.coloringBooksTP = new System.Windows.Forms.TabPage();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.coloringBooksTlp = new System.Windows.Forms.TableLayoutPanel();
 			this.detailBookBtn = new System.Windows.Forms.Button();
 			this.deleteBookBtn = new System.Windows.Forms.Button();
 			this.editBookBtn = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
 			this.bookTotalPagesCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.bookTotalPagesColoredCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.artSuppliesTP = new System.Windows.Forms.TabPage();
-			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.artSuppliesTlp = new System.Windows.Forms.TableLayoutPanel();
 			this.addNewSupplyBtn = new System.Windows.Forms.Button();
 			this.editSupplyBtn = new System.Windows.Forms.Button();
 			this.deleteSupplyBtn = new System.Windows.Forms.Button();
@@ -55,12 +55,25 @@
 			this.wipTP = new System.Windows.Forms.TabPage();
 			this.statisticsTP = new System.Windows.Forms.TabPage();
 			this.versionLbl = new System.Windows.Forms.Label();
+			this.WIPTlp = new System.Windows.Forms.TableLayoutPanel();
+			this.addNewWIPBtn = new System.Windows.Forms.Button();
+			this.editWIPBtn = new System.Windows.Forms.Button();
+			this.deleteWIPBtn = new System.Windows.Forms.Button();
+			this.WIPLv = new System.Windows.Forms.ListView();
+			this.WIPBookNameCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.WIPAuthorCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.WIPPageNumberCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.WIPPageDescriptionCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.WITStartDateCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.WIPNoteCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.mainTC.SuspendLayout();
 			this.coloringBooksTP.SuspendLayout();
-			this.tableLayoutPanel1.SuspendLayout();
+			this.coloringBooksTlp.SuspendLayout();
 			this.artSuppliesTP.SuspendLayout();
-			this.tableLayoutPanel2.SuspendLayout();
+			this.artSuppliesTlp.SuspendLayout();
+			this.wipTP.SuspendLayout();
+			this.WIPTlp.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pictureBox1
@@ -94,7 +107,7 @@
 			// 
 			// coloringBooksTP
 			// 
-			this.coloringBooksTP.Controls.Add(this.tableLayoutPanel1);
+			this.coloringBooksTP.Controls.Add(this.coloringBooksTlp);
 			this.coloringBooksTP.Location = new System.Drawing.Point(4, 22);
 			this.coloringBooksTP.Name = "coloringBooksTP";
 			this.coloringBooksTP.Padding = new System.Windows.Forms.Padding(3);
@@ -103,30 +116,30 @@
 			this.coloringBooksTP.Text = "Coloring Books";
 			this.coloringBooksTP.UseVisualStyleBackColor = true;
 			// 
-			// tableLayoutPanel1
+			// coloringBooksTlp
 			// 
-			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.coloringBooksTlp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.tableLayoutPanel1.ColumnCount = 2;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.Controls.Add(this.detailBookBtn, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.deleteBookBtn, 0, 3);
-			this.tableLayoutPanel1.Controls.Add(this.editBookBtn, 0, 2);
-			this.tableLayoutPanel1.Controls.Add(this.addNewBookBtn, 0, 1);
-			this.tableLayoutPanel1.Controls.Add(this.coloringBooksLv, 1, 0);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 5;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(601, 236);
-			this.tableLayoutPanel1.TabIndex = 0;
+			this.coloringBooksTlp.ColumnCount = 2;
+			this.coloringBooksTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+			this.coloringBooksTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.coloringBooksTlp.Controls.Add(this.detailBookBtn, 0, 0);
+			this.coloringBooksTlp.Controls.Add(this.deleteBookBtn, 0, 3);
+			this.coloringBooksTlp.Controls.Add(this.editBookBtn, 0, 2);
+			this.coloringBooksTlp.Controls.Add(this.addNewBookBtn, 0, 1);
+			this.coloringBooksTlp.Controls.Add(this.coloringBooksLv, 1, 0);
+			this.coloringBooksTlp.Location = new System.Drawing.Point(6, 6);
+			this.coloringBooksTlp.Name = "coloringBooksTlp";
+			this.coloringBooksTlp.RowCount = 5;
+			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.coloringBooksTlp.Size = new System.Drawing.Size(601, 236);
+			this.coloringBooksTlp.TabIndex = 0;
 			// 
 			// detailBookBtn
 			// 
@@ -181,7 +194,7 @@
 			this.coloringBooksLv.HideSelection = false;
 			this.coloringBooksLv.Location = new System.Drawing.Point(93, 3);
 			this.coloringBooksLv.Name = "coloringBooksLv";
-			this.tableLayoutPanel1.SetRowSpan(this.coloringBooksLv, 5);
+			this.coloringBooksTlp.SetRowSpan(this.coloringBooksLv, 5);
 			this.coloringBooksLv.Size = new System.Drawing.Size(505, 230);
 			this.coloringBooksLv.TabIndex = 4;
 			this.coloringBooksLv.UseCompatibleStateImageBehavior = false;
@@ -209,7 +222,7 @@
 			// 
 			// artSuppliesTP
 			// 
-			this.artSuppliesTP.Controls.Add(this.tableLayoutPanel2);
+			this.artSuppliesTP.Controls.Add(this.artSuppliesTlp);
 			this.artSuppliesTP.Location = new System.Drawing.Point(4, 22);
 			this.artSuppliesTP.Name = "artSuppliesTP";
 			this.artSuppliesTP.Padding = new System.Windows.Forms.Padding(3);
@@ -218,28 +231,28 @@
 			this.artSuppliesTP.Text = "Art Supplies";
 			this.artSuppliesTP.UseVisualStyleBackColor = true;
 			// 
-			// tableLayoutPanel2
+			// artSuppliesTlp
 			// 
-			this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.artSuppliesTlp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.tableLayoutPanel2.ColumnCount = 2;
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel2.Controls.Add(this.addNewSupplyBtn, 0, 0);
-			this.tableLayoutPanel2.Controls.Add(this.editSupplyBtn, 0, 1);
-			this.tableLayoutPanel2.Controls.Add(this.deleteSupplyBtn, 0, 2);
-			this.tableLayoutPanel2.Controls.Add(this.artSuppliesLv, 1, 0);
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
-			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 4;
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(601, 236);
-			this.tableLayoutPanel2.TabIndex = 0;
+			this.artSuppliesTlp.ColumnCount = 2;
+			this.artSuppliesTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+			this.artSuppliesTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.artSuppliesTlp.Controls.Add(this.addNewSupplyBtn, 0, 0);
+			this.artSuppliesTlp.Controls.Add(this.editSupplyBtn, 0, 1);
+			this.artSuppliesTlp.Controls.Add(this.deleteSupplyBtn, 0, 2);
+			this.artSuppliesTlp.Controls.Add(this.artSuppliesLv, 1, 0);
+			this.artSuppliesTlp.Location = new System.Drawing.Point(6, 6);
+			this.artSuppliesTlp.Name = "artSuppliesTlp";
+			this.artSuppliesTlp.RowCount = 4;
+			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.artSuppliesTlp.Size = new System.Drawing.Size(601, 236);
+			this.artSuppliesTlp.TabIndex = 0;
 			// 
 			// addNewSupplyBtn
 			// 
@@ -283,7 +296,7 @@
 			this.artSuppliesLv.HideSelection = false;
 			this.artSuppliesLv.Location = new System.Drawing.Point(93, 3);
 			this.artSuppliesLv.Name = "artSuppliesLv";
-			this.tableLayoutPanel2.SetRowSpan(this.artSuppliesLv, 4);
+			this.artSuppliesTlp.SetRowSpan(this.artSuppliesLv, 4);
 			this.artSuppliesLv.Size = new System.Drawing.Size(505, 230);
 			this.artSuppliesLv.TabIndex = 4;
 			this.artSuppliesLv.UseCompatibleStateImageBehavior = false;
@@ -316,6 +329,7 @@
 			// 
 			// wipTP
 			// 
+			this.wipTP.Controls.Add(this.WIPTlp);
 			this.wipTP.Location = new System.Drawing.Point(4, 22);
 			this.wipTP.Name = "wipTP";
 			this.wipTP.Padding = new System.Windows.Forms.Padding(3);
@@ -344,6 +358,106 @@
 			this.versionLbl.TabIndex = 3;
 			this.versionLbl.Text = "v0.1";
 			// 
+			// WIPTlp
+			// 
+			this.WIPTlp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.WIPTlp.ColumnCount = 2;
+			this.WIPTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+			this.WIPTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.WIPTlp.Controls.Add(this.addNewWIPBtn, 0, 0);
+			this.WIPTlp.Controls.Add(this.editWIPBtn, 0, 1);
+			this.WIPTlp.Controls.Add(this.deleteWIPBtn, 0, 2);
+			this.WIPTlp.Controls.Add(this.WIPLv, 1, 0);
+			this.WIPTlp.Location = new System.Drawing.Point(6, 6);
+			this.WIPTlp.Name = "WIPTlp";
+			this.WIPTlp.RowCount = 4;
+			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.WIPTlp.Size = new System.Drawing.Size(601, 236);
+			this.WIPTlp.TabIndex = 1;
+			// 
+			// addNewWIPBtn
+			// 
+			this.addNewWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.addNewWIPBtn.Location = new System.Drawing.Point(3, 3);
+			this.addNewWIPBtn.Name = "addNewWIPBtn";
+			this.addNewWIPBtn.Size = new System.Drawing.Size(84, 19);
+			this.addNewWIPBtn.TabIndex = 1;
+			this.addNewWIPBtn.Text = "Add New";
+			this.addNewWIPBtn.UseVisualStyleBackColor = true;
+			// 
+			// editWIPBtn
+			// 
+			this.editWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.editWIPBtn.Location = new System.Drawing.Point(3, 28);
+			this.editWIPBtn.Name = "editWIPBtn";
+			this.editWIPBtn.Size = new System.Drawing.Size(84, 19);
+			this.editWIPBtn.TabIndex = 2;
+			this.editWIPBtn.Text = "Edit";
+			this.editWIPBtn.UseVisualStyleBackColor = true;
+			// 
+			// deleteWIPBtn
+			// 
+			this.deleteWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.deleteWIPBtn.Location = new System.Drawing.Point(3, 53);
+			this.deleteWIPBtn.Name = "deleteWIPBtn";
+			this.deleteWIPBtn.Size = new System.Drawing.Size(84, 19);
+			this.deleteWIPBtn.TabIndex = 3;
+			this.deleteWIPBtn.Text = "Delete";
+			this.deleteWIPBtn.UseVisualStyleBackColor = true;
+			// 
+			// WIPLv
+			// 
+			this.WIPLv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.WIPLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.WIPBookNameCh,
+            this.WIPAuthorCh,
+            this.WIPPageNumberCh,
+            this.WIPPageDescriptionCh,
+            this.WITStartDateCh,
+            this.WIPNoteCh});
+			this.WIPLv.HideSelection = false;
+			this.WIPLv.Location = new System.Drawing.Point(93, 3);
+			this.WIPLv.Name = "WIPLv";
+			this.WIPTlp.SetRowSpan(this.WIPLv, 4);
+			this.WIPLv.Size = new System.Drawing.Size(505, 230);
+			this.WIPLv.TabIndex = 4;
+			this.WIPLv.UseCompatibleStateImageBehavior = false;
+			this.WIPLv.View = System.Windows.Forms.View.Details;
+			// 
+			// WIPBookNameCh
+			// 
+			this.WIPBookNameCh.Text = "Book Name";
+			this.WIPBookNameCh.Width = 81;
+			// 
+			// WIPAuthorCh
+			// 
+			this.WIPAuthorCh.Text = "Author";
+			// 
+			// WIPPageNumberCh
+			// 
+			this.WIPPageNumberCh.Text = "Page Number";
+			this.WIPPageNumberCh.Width = 89;
+			// 
+			// WIPPageDescriptionCh
+			// 
+			this.WIPPageDescriptionCh.Text = "Page Description";
+			// 
+			// WITStartDateCh
+			// 
+			this.WITStartDateCh.Text = "Start Date";
+			// 
+			// WIPNoteCh
+			// 
+			this.WIPNoteCh.Text = "Note";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,9 +473,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.mainTC.ResumeLayout(false);
 			this.coloringBooksTP.ResumeLayout(false);
-			this.tableLayoutPanel1.ResumeLayout(false);
+			this.coloringBooksTlp.ResumeLayout(false);
 			this.artSuppliesTP.ResumeLayout(false);
-			this.tableLayoutPanel2.ResumeLayout(false);
+			this.artSuppliesTlp.ResumeLayout(false);
+			this.wipTP.ResumeLayout(false);
+			this.WIPTlp.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -372,7 +488,7 @@
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.TabControl mainTC;
 		private System.Windows.Forms.TabPage coloringBooksTP;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.TableLayoutPanel coloringBooksTlp;
 		private System.Windows.Forms.Button detailBookBtn;
 		private System.Windows.Forms.Button deleteBookBtn;
 		private System.Windows.Forms.Button editBookBtn;
@@ -387,7 +503,7 @@
 		private System.Windows.Forms.ColumnHeader bookTotalPagesCh;
 		private System.Windows.Forms.ColumnHeader bookTotalPagesColoredCh;
 		private System.Windows.Forms.Label versionLbl;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+		private System.Windows.Forms.TableLayoutPanel artSuppliesTlp;
 		private System.Windows.Forms.Button addNewSupplyBtn;
 		private System.Windows.Forms.Button editSupplyBtn;
 		private System.Windows.Forms.Button deleteSupplyBtn;
@@ -395,6 +511,17 @@
 		private System.Windows.Forms.ColumnHeader supplyNameCh;
 		private System.Windows.Forms.ColumnHeader supplyBrandCh;
 		private System.Windows.Forms.ColumnHeader supplyTypeCh;
+		private System.Windows.Forms.TableLayoutPanel WIPTlp;
+		private System.Windows.Forms.Button addNewWIPBtn;
+		private System.Windows.Forms.Button editWIPBtn;
+		private System.Windows.Forms.Button deleteWIPBtn;
+		private System.Windows.Forms.ListView WIPLv;
+		private System.Windows.Forms.ColumnHeader WIPBookNameCh;
+		private System.Windows.Forms.ColumnHeader WIPAuthorCh;
+		private System.Windows.Forms.ColumnHeader WIPPageNumberCh;
+		private System.Windows.Forms.ColumnHeader WIPPageDescriptionCh;
+		private System.Windows.Forms.ColumnHeader WITStartDateCh;
+		private System.Windows.Forms.ColumnHeader WIPNoteCh;
 	}
 }
 
