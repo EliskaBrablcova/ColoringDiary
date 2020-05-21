@@ -53,8 +53,6 @@
 			this.supplyTypeCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.plannerTP = new System.Windows.Forms.TabPage();
 			this.wipTP = new System.Windows.Forms.TabPage();
-			this.statisticsTP = new System.Windows.Forms.TabPage();
-			this.versionLbl = new System.Windows.Forms.Label();
 			this.WIPTlp = new System.Windows.Forms.TableLayoutPanel();
 			this.addNewWIPBtn = new System.Windows.Forms.Button();
 			this.editWIPBtn = new System.Windows.Forms.Button();
@@ -66,6 +64,8 @@
 			this.WIPPageDescriptionCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.WITStartDateCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.WIPNoteCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.statisticsTP = new System.Windows.Forms.TabPage();
+			this.versionLbl = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.mainTC.SuspendLayout();
 			this.coloringBooksTP.SuspendLayout();
@@ -338,26 +338,6 @@
 			this.wipTP.Text = "WIP";
 			this.wipTP.UseVisualStyleBackColor = true;
 			// 
-			// statisticsTP
-			// 
-			this.statisticsTP.Location = new System.Drawing.Point(4, 22);
-			this.statisticsTP.Name = "statisticsTP";
-			this.statisticsTP.Padding = new System.Windows.Forms.Padding(3);
-			this.statisticsTP.Size = new System.Drawing.Size(613, 248);
-			this.statisticsTP.TabIndex = 3;
-			this.statisticsTP.Text = "Statistics";
-			this.statisticsTP.UseVisualStyleBackColor = true;
-			// 
-			// versionLbl
-			// 
-			this.versionLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.versionLbl.AutoSize = true;
-			this.versionLbl.Location = new System.Drawing.Point(602, 446);
-			this.versionLbl.Name = "versionLbl";
-			this.versionLbl.Size = new System.Drawing.Size(28, 13);
-			this.versionLbl.TabIndex = 3;
-			this.versionLbl.Text = "v0.1";
-			// 
 			// WIPTlp
 			// 
 			this.WIPTlp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -444,7 +424,7 @@
 			// WIPPageNumberCh
 			// 
 			this.WIPPageNumberCh.Text = "Page Number";
-			this.WIPPageNumberCh.Width = 89;
+			this.WIPPageNumberCh.Width = 82;
 			// 
 			// WIPPageDescriptionCh
 			// 
@@ -457,6 +437,26 @@
 			// WIPNoteCh
 			// 
 			this.WIPNoteCh.Text = "Note";
+			// 
+			// statisticsTP
+			// 
+			this.statisticsTP.Location = new System.Drawing.Point(4, 22);
+			this.statisticsTP.Name = "statisticsTP";
+			this.statisticsTP.Padding = new System.Windows.Forms.Padding(3);
+			this.statisticsTP.Size = new System.Drawing.Size(613, 248);
+			this.statisticsTP.TabIndex = 3;
+			this.statisticsTP.Text = "Statistics";
+			this.statisticsTP.UseVisualStyleBackColor = true;
+			// 
+			// versionLbl
+			// 
+			this.versionLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.versionLbl.AutoSize = true;
+			this.versionLbl.Location = new System.Drawing.Point(602, 446);
+			this.versionLbl.Name = "versionLbl";
+			this.versionLbl.Size = new System.Drawing.Size(28, 13);
+			this.versionLbl.TabIndex = 3;
+			this.versionLbl.Text = "v0.1";
 			// 
 			// MainForm
 			// 

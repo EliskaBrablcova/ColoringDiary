@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Models.Entities
 {
-	public class ColoringBook
+	public class ColoringBooks
 	{
 		public int ID { get; set; }
 		public string Name { get; set; }
