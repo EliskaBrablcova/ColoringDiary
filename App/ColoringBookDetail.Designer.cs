@@ -30,6 +30,8 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColoringBookDetail));
 			this.coloringBookDetailTlp = new System.Windows.Forms.TableLayoutPanel();
+			this.coloringBookDetailDeletePageBtn = new System.Windows.Forms.Button();
+			this.coloringBookDetailEditPageBtn = new System.Windows.Forms.Button();
 			this.coloringBookDetailBookAuthorLbl = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.coloringBookDetailBookNameLbl = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
 			this.coloringBookDetailArtSuppliesUsedCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.coloringBookDetailNoteCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.coloringBookDetailAddNewPageBtn = new System.Windows.Forms.Button();
-			this.coloringBookDetailEditPageBtn = new System.Windows.Forms.Button();
-			this.coloringBookDetailDeletePageBtn = new System.Windows.Forms.Button();
 			this.coloringBookDetailTlp.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -71,8 +71,28 @@
 			this.coloringBookDetailTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
 			this.coloringBookDetailTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
 			this.coloringBookDetailTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.coloringBookDetailTlp.Size = new System.Drawing.Size(743, 243);
+			this.coloringBookDetailTlp.Size = new System.Drawing.Size(743, 372);
 			this.coloringBookDetailTlp.TabIndex = 0;
+			// 
+			// coloringBookDetailDeletePageBtn
+			// 
+			this.coloringBookDetailDeletePageBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.coloringBookDetailDeletePageBtn.Location = new System.Drawing.Point(3, 213);
+			this.coloringBookDetailDeletePageBtn.Name = "coloringBookDetailDeletePageBtn";
+			this.coloringBookDetailDeletePageBtn.Size = new System.Drawing.Size(244, 24);
+			this.coloringBookDetailDeletePageBtn.TabIndex = 7;
+			this.coloringBookDetailDeletePageBtn.Text = "Delete Page";
+			this.coloringBookDetailDeletePageBtn.UseVisualStyleBackColor = true;
+			// 
+			// coloringBookDetailEditPageBtn
+			// 
+			this.coloringBookDetailEditPageBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.coloringBookDetailEditPageBtn.Location = new System.Drawing.Point(3, 183);
+			this.coloringBookDetailEditPageBtn.Name = "coloringBookDetailEditPageBtn";
+			this.coloringBookDetailEditPageBtn.Size = new System.Drawing.Size(244, 24);
+			this.coloringBookDetailEditPageBtn.TabIndex = 6;
+			this.coloringBookDetailEditPageBtn.Text = "Edit Page";
+			this.coloringBookDetailEditPageBtn.UseVisualStyleBackColor = true;
 			// 
 			// coloringBookDetailBookAuthorLbl
 			// 
@@ -125,7 +145,7 @@
 			this.coloringBookDetailLv.Location = new System.Drawing.Point(253, 153);
 			this.coloringBookDetailLv.Name = "coloringBookDetailLv";
 			this.coloringBookDetailTlp.SetRowSpan(this.coloringBookDetailLv, 4);
-			this.coloringBookDetailLv.Size = new System.Drawing.Size(487, 87);
+			this.coloringBookDetailLv.Size = new System.Drawing.Size(487, 216);
 			this.coloringBookDetailLv.TabIndex = 4;
 			this.coloringBookDetailLv.UseCompatibleStateImageBehavior = false;
 			this.coloringBookDetailLv.View = System.Windows.Forms.View.Details;
@@ -173,31 +193,11 @@
 			this.coloringBookDetailAddNewPageBtn.Text = "Add New Page";
 			this.coloringBookDetailAddNewPageBtn.UseVisualStyleBackColor = true;
 			// 
-			// coloringBookDetailEditPageBtn
-			// 
-			this.coloringBookDetailEditPageBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.coloringBookDetailEditPageBtn.Location = new System.Drawing.Point(3, 183);
-			this.coloringBookDetailEditPageBtn.Name = "coloringBookDetailEditPageBtn";
-			this.coloringBookDetailEditPageBtn.Size = new System.Drawing.Size(244, 24);
-			this.coloringBookDetailEditPageBtn.TabIndex = 6;
-			this.coloringBookDetailEditPageBtn.Text = "Edit Page";
-			this.coloringBookDetailEditPageBtn.UseVisualStyleBackColor = true;
-			// 
-			// coloringBookDetailDeletePageBtn
-			// 
-			this.coloringBookDetailDeletePageBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.coloringBookDetailDeletePageBtn.Location = new System.Drawing.Point(3, 213);
-			this.coloringBookDetailDeletePageBtn.Name = "coloringBookDetailDeletePageBtn";
-			this.coloringBookDetailDeletePageBtn.Size = new System.Drawing.Size(244, 24);
-			this.coloringBookDetailDeletePageBtn.TabIndex = 7;
-			this.coloringBookDetailDeletePageBtn.Text = "Delete Page";
-			this.coloringBookDetailDeletePageBtn.UseVisualStyleBackColor = true;
-			// 
 			// ColoringBookDetail
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(767, 267);
+			this.ClientSize = new System.Drawing.Size(767, 396);
 			this.Controls.Add(this.coloringBookDetailTlp);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(783, 306);
