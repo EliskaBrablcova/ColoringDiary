@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Models.Entities
 {
-	public class ArtSupplies
+	public class ArtSupply
 	{
 		public int ID { get; set; }
 		public string Name { get; set; }

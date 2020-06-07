@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models.Entities
+namespace Models.ViewModels
 {
-	public class WIP
+	public class WIPVM
 	{
-		public int ID { get; set; }
-		public string BookName { get; set; }
-		public string Author { get; set; }
+		public ColoringBookVM Book { get; set; }
+		public int PageID { get; set; }
 		public int PageNumber { get; set; }
 		public string PageDescription { get; set; }
 		public DateTime StartDate { get; set; }
