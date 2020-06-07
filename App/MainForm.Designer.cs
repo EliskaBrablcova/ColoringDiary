@@ -54,9 +54,8 @@
 			this.plannerTP = new System.Windows.Forms.TabPage();
 			this.wipTP = new System.Windows.Forms.TabPage();
 			this.WIPTlp = new System.Windows.Forms.TableLayoutPanel();
-			this.addNewWIPBtn = new System.Windows.Forms.Button();
 			this.editWIPBtn = new System.Windows.Forms.Button();
-			this.deleteWIPBtn = new System.Windows.Forms.Button();
+			this.finishWIPBtn = new System.Windows.Forms.Button();
 			this.WIPLv = new System.Windows.Forms.ListView();
 			this.WIPBookNameCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.WIPAuthorCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -346,9 +345,8 @@
 			this.WIPTlp.ColumnCount = 2;
 			this.WIPTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
 			this.WIPTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.WIPTlp.Controls.Add(this.addNewWIPBtn, 0, 0);
-			this.WIPTlp.Controls.Add(this.editWIPBtn, 0, 1);
-			this.WIPTlp.Controls.Add(this.deleteWIPBtn, 0, 2);
+			this.WIPTlp.Controls.Add(this.editWIPBtn, 0, 0);
+			this.WIPTlp.Controls.Add(this.finishWIPBtn, 0, 1);
 			this.WIPTlp.Controls.Add(this.WIPLv, 1, 0);
 			this.WIPTlp.Location = new System.Drawing.Point(6, 6);
 			this.WIPTlp.Name = "WIPTlp";
@@ -361,35 +359,25 @@
 			this.WIPTlp.Size = new System.Drawing.Size(601, 236);
 			this.WIPTlp.TabIndex = 1;
 			// 
-			// addNewWIPBtn
-			// 
-			this.addNewWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.addNewWIPBtn.Location = new System.Drawing.Point(3, 3);
-			this.addNewWIPBtn.Name = "addNewWIPBtn";
-			this.addNewWIPBtn.Size = new System.Drawing.Size(84, 19);
-			this.addNewWIPBtn.TabIndex = 1;
-			this.addNewWIPBtn.Text = "Add New";
-			this.addNewWIPBtn.UseVisualStyleBackColor = true;
-			// 
 			// editWIPBtn
 			// 
 			this.editWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.editWIPBtn.Location = new System.Drawing.Point(3, 28);
+			this.editWIPBtn.Location = new System.Drawing.Point(3, 3);
 			this.editWIPBtn.Name = "editWIPBtn";
 			this.editWIPBtn.Size = new System.Drawing.Size(84, 19);
 			this.editWIPBtn.TabIndex = 2;
 			this.editWIPBtn.Text = "Edit";
 			this.editWIPBtn.UseVisualStyleBackColor = true;
 			// 
-			// deleteWIPBtn
+			// finishWIPBtn
 			// 
-			this.deleteWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.deleteWIPBtn.Location = new System.Drawing.Point(3, 53);
-			this.deleteWIPBtn.Name = "deleteWIPBtn";
-			this.deleteWIPBtn.Size = new System.Drawing.Size(84, 19);
-			this.deleteWIPBtn.TabIndex = 3;
-			this.deleteWIPBtn.Text = "Delete";
-			this.deleteWIPBtn.UseVisualStyleBackColor = true;
+			this.finishWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.finishWIPBtn.Location = new System.Drawing.Point(3, 28);
+			this.finishWIPBtn.Name = "finishWIPBtn";
+			this.finishWIPBtn.Size = new System.Drawing.Size(84, 19);
+			this.finishWIPBtn.TabIndex = 3;
+			this.finishWIPBtn.Text = "Finish";
+			this.finishWIPBtn.UseVisualStyleBackColor = true;
 			// 
 			// WIPLv
 			// 
@@ -512,9 +500,8 @@
 		private System.Windows.Forms.ColumnHeader supplyBrandCh;
 		private System.Windows.Forms.ColumnHeader supplyTypeCh;
 		private System.Windows.Forms.TableLayoutPanel WIPTlp;
-		private System.Windows.Forms.Button addNewWIPBtn;
 		private System.Windows.Forms.Button editWIPBtn;
-		private System.Windows.Forms.Button deleteWIPBtn;
+		private System.Windows.Forms.Button finishWIPBtn;
 		private System.Windows.Forms.ListView WIPLv;
 		private System.Windows.Forms.ColumnHeader WIPBookNameCh;
 		private System.Windows.Forms.ColumnHeader WIPAuthorCh;
