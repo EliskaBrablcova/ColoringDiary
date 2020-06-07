@@ -11,7 +11,7 @@ namespace Models.ViewModels
 		public string PageDescription { get; set; }
 		public string Note { get; set; }
 		public DateTime? StartDate { get; set; }
-		public DateTime? FinnishDate { get; set; }
+		public DateTime? FinishDate { get; set; }
 		public List<string> ArtSuppliesUsed { get; set; }
 	}
 }

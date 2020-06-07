@@ -39,7 +39,7 @@
 			this.coloringBookDetailPageNumberCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.coloringBookDetailPageDescriptionCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.coloringBookDetailStartDateCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.coloringBookDetailFinnishDateCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.coloringBookDetailFinishDateCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.coloringBookDetailArtSuppliesUsedCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.coloringBookDetailNoteCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.coloringBookDetailAddNewPageBtn = new System.Windows.Forms.Button();
@@ -138,7 +138,7 @@
             this.coloringBookDetailPageNumberCh,
             this.coloringBookDetailPageDescriptionCh,
             this.coloringBookDetailStartDateCh,
-            this.coloringBookDetailFinnishDateCh,
+            this.coloringBookDetailFinishDateCh,
             this.coloringBookDetailArtSuppliesUsedCh,
             this.coloringBookDetailNoteCh});
 			this.coloringBookDetailLv.HideSelection = false;
@@ -166,11 +166,11 @@
 			this.coloringBookDetailStartDateCh.Text = "Start Date";
 			this.coloringBookDetailStartDateCh.Width = 72;
 			// 
-			// coloringBookDetailFinnishDateCh
+			// coloringBookDetailFinishDateCh
 			// 
-			this.coloringBookDetailFinnishDateCh.DisplayIndex = 4;
-			this.coloringBookDetailFinnishDateCh.Text = "Finnish Date";
-			this.coloringBookDetailFinnishDateCh.Width = 72;
+			this.coloringBookDetailFinishDateCh.DisplayIndex = 4;
+			this.coloringBookDetailFinishDateCh.Text = "Finish Date";
+			this.coloringBookDetailFinishDateCh.Width = 72;
 			// 
 			// coloringBookDetailArtSuppliesUsedCh
 			// 
@@ -221,7 +221,7 @@
 		private System.Windows.Forms.ColumnHeader coloringBookDetailPageNumberCh;
 		private System.Windows.Forms.ColumnHeader coloringBookDetailPageDescriptionCh;
 		private System.Windows.Forms.ColumnHeader coloringBookDetailStartDateCh;
-		private System.Windows.Forms.ColumnHeader coloringBookDetailFinnishDateCh;
+		private System.Windows.Forms.ColumnHeader coloringBookDetailFinishDateCh;
 		private System.Windows.Forms.ColumnHeader coloringBookDetailArtSuppliesUsedCh;
 		private System.Windows.Forms.ColumnHeader coloringBookDetailNoteCh;
 		private System.Windows.Forms.Button coloringBookDetailAddNewPageBtn;

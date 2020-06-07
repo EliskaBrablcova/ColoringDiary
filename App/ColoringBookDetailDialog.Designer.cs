@@ -37,10 +37,10 @@
 			this.coloringBookDetailDialogPageDescriptionLbl = new System.Windows.Forms.Label();
 			this.coloringBookDetailDialogNoteLbl = new System.Windows.Forms.Label();
 			this.coloringBookDetailDialogStartDateLbl = new System.Windows.Forms.Label();
-			this.coloringBookDetailDialogFinnishDateLbl = new System.Windows.Forms.Label();
+			this.coloringBookDetailDialogFinishDateLbl = new System.Windows.Forms.Label();
 			this.coloringBookDetailDialogArtSuplliesLbl = new System.Windows.Forms.Label();
 			this.coloringBookDetailDialogStartDateDtp = new System.Windows.Forms.DateTimePicker();
-			this.coloringBookDetailDialogFinnishDateDtp = new System.Windows.Forms.DateTimePicker();
+			this.coloringBookDetailDialogFinishDateDtp = new System.Windows.Forms.DateTimePicker();
 			this.coloringBookDetailDialogPageNumberNud = new System.Windows.Forms.NumericUpDown();
 			this.coloringBookDetailDialogPageDescriptionTB = new System.Windows.Forms.TextBox();
 			this.coloringBookDetailDialogArtSuplliesClb = new System.Windows.Forms.CheckedListBox();
@@ -83,10 +83,10 @@
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogPageDescriptionLbl, 0, 1);
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogNoteLbl, 0, 2);
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogStartDateLbl, 0, 3);
-			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogFinnishDateLbl, 0, 4);
+			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogFinishDateLbl, 0, 4);
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogArtSuplliesLbl, 0, 5);
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogStartDateDtp, 1, 3);
-			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogFinnishDateDtp, 1, 4);
+			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogFinishDateDtp, 1, 4);
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogPageNumberNud, 1, 0);
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogPageDescriptionTB, 1, 1);
 			this.coloringBookDetailDialogTlp.Controls.Add(this.coloringBookDetailDialogArtSuplliesClb, 1, 5);
@@ -155,16 +155,16 @@
 			this.coloringBookDetailDialogStartDateLbl.Text = "Start Date";
 			this.coloringBookDetailDialogStartDateLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// coloringBookDetailDialogFinnishDateLbl
+			// coloringBookDetailDialogFinishDateLbl
 			// 
-			this.coloringBookDetailDialogFinnishDateLbl.AutoSize = true;
-			this.coloringBookDetailDialogFinnishDateLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.coloringBookDetailDialogFinnishDateLbl.Location = new System.Drawing.Point(3, 100);
-			this.coloringBookDetailDialogFinnishDateLbl.Name = "coloringBookDetailDialogFinnishDateLbl";
-			this.coloringBookDetailDialogFinnishDateLbl.Size = new System.Drawing.Size(94, 25);
-			this.coloringBookDetailDialogFinnishDateLbl.TabIndex = 4;
-			this.coloringBookDetailDialogFinnishDateLbl.Text = "Finnish Date";
-			this.coloringBookDetailDialogFinnishDateLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.coloringBookDetailDialogFinishDateLbl.AutoSize = true;
+			this.coloringBookDetailDialogFinishDateLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.coloringBookDetailDialogFinishDateLbl.Location = new System.Drawing.Point(3, 100);
+			this.coloringBookDetailDialogFinishDateLbl.Name = "coloringBookDetailDialogFinishDateLbl";
+			this.coloringBookDetailDialogFinishDateLbl.Size = new System.Drawing.Size(94, 25);
+			this.coloringBookDetailDialogFinishDateLbl.TabIndex = 4;
+			this.coloringBookDetailDialogFinishDateLbl.Text = "Finish Date";
+			this.coloringBookDetailDialogFinishDateLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// coloringBookDetailDialogArtSuplliesLbl
 			// 
@@ -185,13 +185,13 @@
 			this.coloringBookDetailDialogStartDateDtp.Size = new System.Drawing.Size(322, 20);
 			this.coloringBookDetailDialogStartDateDtp.TabIndex = 6;
 			// 
-			// coloringBookDetailDialogFinnishDateDtp
+			// coloringBookDetailDialogFinishDateDtp
 			// 
-			this.coloringBookDetailDialogFinnishDateDtp.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.coloringBookDetailDialogFinnishDateDtp.Location = new System.Drawing.Point(103, 103);
-			this.coloringBookDetailDialogFinnishDateDtp.Name = "coloringBookDetailDialogFinnishDateDtp";
-			this.coloringBookDetailDialogFinnishDateDtp.Size = new System.Drawing.Size(322, 20);
-			this.coloringBookDetailDialogFinnishDateDtp.TabIndex = 7;
+			this.coloringBookDetailDialogFinishDateDtp.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.coloringBookDetailDialogFinishDateDtp.Location = new System.Drawing.Point(103, 103);
+			this.coloringBookDetailDialogFinishDateDtp.Name = "coloringBookDetailDialogFinishDateDtp";
+			this.coloringBookDetailDialogFinishDateDtp.Size = new System.Drawing.Size(322, 20);
+			this.coloringBookDetailDialogFinishDateDtp.TabIndex = 7;
 			// 
 			// coloringBookDetailDialogPageNumberNud
 			// 
@@ -250,11 +250,11 @@
 		private System.Windows.Forms.Label coloringBookDetailDialogPageDescriptionLbl;
 		private System.Windows.Forms.Label coloringBookDetailDialogNoteLbl;
 		private System.Windows.Forms.Label coloringBookDetailDialogStartDateLbl;
-		private System.Windows.Forms.Label coloringBookDetailDialogFinnishDateLbl;
+		private System.Windows.Forms.Label coloringBookDetailDialogFinishDateLbl;
 		private System.Windows.Forms.Label coloringBookDetailDialogArtSuplliesLbl;
 		private System.Windows.Forms.TextBox coloringBookDetailDialogNoteTB;
 		private System.Windows.Forms.DateTimePicker coloringBookDetailDialogStartDateDtp;
-		private System.Windows.Forms.DateTimePicker coloringBookDetailDialogFinnishDateDtp;
+		private System.Windows.Forms.DateTimePicker coloringBookDetailDialogFinishDateDtp;
 		private System.Windows.Forms.NumericUpDown coloringBookDetailDialogPageNumberNud;
 		private System.Windows.Forms.TextBox coloringBookDetailDialogPageDescriptionTB;
 		private System.Windows.Forms.CheckedListBox coloringBookDetailDialogArtSuplliesClb;
