@@ -81,5 +81,31 @@ namespace Eli.ColoringDiary.App
 				reloadArtSupplies();
 			}
 		}
+
+		private void editSupplyBtn_Click(object sender, EventArgs e)
+		{
+			var selected = artSuppliesLv.SelectedIndices;
+			if (selected.Count == 1)
+			{
+				var selectedIndex = selected[0];
+				var item = _artSupplyRepo.GetForEdit(_artSuppliesIds[selectedIndex]);
+				if (item == null)
+				{
+					return;
+				}
+				var dialog = new ArtSuppliesDialog(item, true, _artSupplyRepo.GetAllTypes());
+				var result = dialog.ShowDialog();
+				if (result == DialogResult.OK)
+				{
+					_artSupplyRepo.Edit(dialog.Item);
+					reloadArtSupplies();
+				}
+			}
+		}
+
+		private void deleteSupplyBtn_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

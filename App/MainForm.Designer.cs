@@ -273,6 +273,7 @@
 			this.editSupplyBtn.TabIndex = 2;
 			this.editSupplyBtn.Text = "Edit";
 			this.editSupplyBtn.UseVisualStyleBackColor = true;
+			this.editSupplyBtn.Click += new System.EventHandler(this.editSupplyBtn_Click);
 			// 
 			// deleteSupplyBtn
 			// 
@@ -283,6 +284,7 @@
 			this.deleteSupplyBtn.TabIndex = 3;
 			this.deleteSupplyBtn.Text = "Delete";
 			this.deleteSupplyBtn.UseVisualStyleBackColor = true;
+			this.deleteSupplyBtn.Click += new System.EventHandler(this.deleteSupplyBtn_Click);
 			// 
 			// artSuppliesLv
 			// 
