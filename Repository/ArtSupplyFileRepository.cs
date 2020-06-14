@@ -36,13 +36,28 @@ namespace Eli.ColoringDiary.Repository
 
 		public void Delete(int id)
 		{
-			throw new NotImplementedException();
+			var items = readFromFile();
+			var position = getPositionById(items, id);
+			if (position != null)
+			{
+				items.RemoveAt(position.Value);
+				saveToFile(items);
+			}
 		}
 
 		public void Edit(ArtSupply artSupply)
 		{
-			throw new NotImplementedException();
+			var items = readFromFile();
+			var item = getItemById(items, artSupply.ID);
+			if (item != null)
+			{
+				item.Name = artSupply.Name;
+				item.Brand = artSupply.Brand;
+				item.Type = artSupply.Type;
+				saveToFile(items);
+			}
 		}
+
 
 		public List<ArtSupplyVM> GetAll()
 		{
@@ -69,7 +84,8 @@ namespace Eli.ColoringDiary.Repository
 
 		public ArtSupply GetForEdit(int id)
 		{
-			throw new NotImplementedException();
+			var items = readFromFile();
+			return getItemById(items, id);
 		}
 
 		public List<string> GetAllTypes()
@@ -143,6 +159,28 @@ namespace Eli.ColoringDiary.Repository
 				}
 			}
 			return id + 1;
+		}
+		private int? getPositionById(List<ArtSupply> items, int id)
+		{
+			for (int i = 0; i < items.Count; i++)
+			{
+				var item = items[i];
+				if (item.ID == id)
+				{
+					return i;
+				}
+			}
+			return null;
+		}
+		
+		private ArtSupply getItemById(List<ArtSupply> items, int id)
+		{
+			var position = getPositionById(items, id);
+			if (position == null)
+			{
+				return null;
+			}
+			return items[position.Value];
 		}
 
 	}
