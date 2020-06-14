@@ -121,5 +121,15 @@
     <Content Include="coloringDiary.png" />
     <Content Include="coloringDiaryIcon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{92EA54BB-AEE8-4279-8CF3-A3F620BFE28F}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{CB1C77D7-D15F-44FC-8911-AB10C8B18B9A}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -262,6 +262,7 @@
 			this.addNewSupplyBtn.TabIndex = 1;
 			this.addNewSupplyBtn.Text = "Add New";
 			this.addNewSupplyBtn.UseVisualStyleBackColor = true;
+			this.addNewSupplyBtn.Click += new System.EventHandler(this.addNewSupplyBtn_Click);
 			// 
 			// editSupplyBtn
 			// 
@@ -458,6 +459,7 @@
 			this.MinimumSize = new System.Drawing.Size(525, 372);
 			this.Name = "MainForm";
 			this.Text = "Coloring Diary";
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.mainTC.ResumeLayout(false);
 			this.coloringBooksTP.ResumeLayout(false);

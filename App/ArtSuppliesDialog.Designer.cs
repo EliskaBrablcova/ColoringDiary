@@ -144,6 +144,7 @@
 			this.artSuppliesDialogSaveBtn.TabIndex = 4;
 			this.artSuppliesDialogSaveBtn.Text = "Save";
 			this.artSuppliesDialogSaveBtn.UseVisualStyleBackColor = true;
+			this.artSuppliesDialogSaveBtn.Click += new System.EventHandler(this.artSuppliesDialogSaveBtn_Click);
 			// 
 			// ArtSuppliesDialog
 			// 
@@ -161,6 +162,7 @@
 			this.Name = "ArtSuppliesDialog";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "ArtSuppliesDialog";
+			this.Load += new System.EventHandler(this.ArtSuppliesDialog_Load);
 			this.artSuppliesDialogTlp.ResumeLayout(false);
 			this.artSuppliesDialogTlp.PerformLayout();
 			this.ResumeLayout(false);
