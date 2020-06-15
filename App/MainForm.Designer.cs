@@ -143,6 +143,7 @@
 			// detailBookBtn
 			// 
 			this.detailBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.detailBookBtn.Enabled = false;
 			this.detailBookBtn.Location = new System.Drawing.Point(3, 3);
 			this.detailBookBtn.Name = "detailBookBtn";
 			this.detailBookBtn.Size = new System.Drawing.Size(84, 19);
@@ -153,6 +154,7 @@
 			// deleteBookBtn
 			// 
 			this.deleteBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.deleteBookBtn.Enabled = false;
 			this.deleteBookBtn.Location = new System.Drawing.Point(3, 78);
 			this.deleteBookBtn.Name = "deleteBookBtn";
 			this.deleteBookBtn.Size = new System.Drawing.Size(84, 19);
@@ -163,6 +165,7 @@
 			// editBookBtn
 			// 
 			this.editBookBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.editBookBtn.Enabled = false;
 			this.editBookBtn.Location = new System.Drawing.Point(3, 53);
 			this.editBookBtn.Name = "editBookBtn";
 			this.editBookBtn.Size = new System.Drawing.Size(84, 19);
@@ -269,6 +272,7 @@
 			// editSupplyBtn
 			// 
 			this.editSupplyBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.editSupplyBtn.Enabled = false;
 			this.editSupplyBtn.Location = new System.Drawing.Point(3, 28);
 			this.editSupplyBtn.Name = "editSupplyBtn";
 			this.editSupplyBtn.Size = new System.Drawing.Size(84, 19);
@@ -280,6 +284,7 @@
 			// deleteSupplyBtn
 			// 
 			this.deleteSupplyBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.deleteSupplyBtn.Enabled = false;
 			this.deleteSupplyBtn.Location = new System.Drawing.Point(3, 53);
 			this.deleteSupplyBtn.Name = "deleteSupplyBtn";
 			this.deleteSupplyBtn.Size = new System.Drawing.Size(84, 19);
@@ -370,6 +375,7 @@
 			// editWIPBtn
 			// 
 			this.editWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.editWIPBtn.Enabled = false;
 			this.editWIPBtn.Location = new System.Drawing.Point(3, 3);
 			this.editWIPBtn.Name = "editWIPBtn";
 			this.editWIPBtn.Size = new System.Drawing.Size(84, 19);
@@ -380,6 +386,7 @@
 			// finishWIPBtn
 			// 
 			this.finishWIPBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.finishWIPBtn.Enabled = false;
 			this.finishWIPBtn.Location = new System.Drawing.Point(3, 28);
 			this.finishWIPBtn.Name = "finishWIPBtn";
 			this.finishWIPBtn.Size = new System.Drawing.Size(84, 19);
