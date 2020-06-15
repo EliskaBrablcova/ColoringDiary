@@ -190,8 +190,10 @@
             this.bookAuthorCh,
             this.bookTotalPagesCh,
             this.bookTotalPagesColoredCh});
+			this.coloringBooksLv.FullRowSelect = true;
 			this.coloringBooksLv.HideSelection = false;
 			this.coloringBooksLv.Location = new System.Drawing.Point(93, 3);
+			this.coloringBooksLv.MultiSelect = false;
 			this.coloringBooksLv.Name = "coloringBooksLv";
 			this.coloringBooksTlp.SetRowSpan(this.coloringBooksLv, 5);
 			this.coloringBooksLv.Size = new System.Drawing.Size(505, 230);
@@ -295,8 +297,10 @@
             this.supplyNameCh,
             this.supplyBrandCh,
             this.supplyTypeCh});
+			this.artSuppliesLv.FullRowSelect = true;
 			this.artSuppliesLv.HideSelection = false;
 			this.artSuppliesLv.Location = new System.Drawing.Point(93, 3);
+			this.artSuppliesLv.MultiSelect = false;
 			this.artSuppliesLv.Name = "artSuppliesLv";
 			this.artSuppliesTlp.SetRowSpan(this.artSuppliesLv, 4);
 			this.artSuppliesLv.Size = new System.Drawing.Size(505, 230);
@@ -395,8 +399,10 @@
             this.WIPPageDescriptionCh,
             this.WITStartDateCh,
             this.WIPNoteCh});
+			this.WIPLv.FullRowSelect = true;
 			this.WIPLv.HideSelection = false;
 			this.WIPLv.Location = new System.Drawing.Point(93, 3);
+			this.WIPLv.MultiSelect = false;
 			this.WIPLv.Name = "WIPLv";
 			this.WIPTlp.SetRowSpan(this.WIPLv, 4);
 			this.WIPLv.Size = new System.Drawing.Size(505, 230);
