@@ -39,6 +39,7 @@ namespace Eli.ColoringDiary.App
 			var artSupplies = _artSupplyRepo.GetAll();
 			saveIds(artSupplies);
 			display(artSupplies);
+			setArtSuppliesButtonStates();
 		}
 		private void saveIds(List<ArtSupplyVM> artSupplies)
 		{
@@ -136,6 +137,30 @@ namespace Eli.ColoringDiary.App
 					reloadArtSupplies();
 				}
 			}
+		}
+
+		private void artSuppliesLv_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			setArtSuppliesButtonStates();
+		}
+
+		private void setArtSuppliesButtonStates()
+		{
+			var selected = artSuppliesLv.SelectedIndices;
+			if (selected.Count == 1)
+			{
+				setArtSuppliesButtonStates(true);
+			}
+			else
+			{
+				setArtSuppliesButtonStates(false);
+			}
+		}
+
+		private void setArtSuppliesButtonStates(bool enabled)
+		{
+			deleteSupplyBtn.Enabled = enabled;
+			editSupplyBtn.Enabled = enabled;
 		}
 	}
 }
