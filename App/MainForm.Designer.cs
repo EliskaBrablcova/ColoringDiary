@@ -303,6 +303,7 @@
 			this.artSuppliesLv.TabIndex = 4;
 			this.artSuppliesLv.UseCompatibleStateImageBehavior = false;
 			this.artSuppliesLv.View = System.Windows.Forms.View.Details;
+			this.artSuppliesLv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.artSuppliesLv_KeyDown);
 			// 
 			// supplyNameCh
 			// 

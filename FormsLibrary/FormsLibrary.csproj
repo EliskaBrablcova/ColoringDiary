@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{951BBBE9-7BD0-4933-98EB-6B4BD4747144}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Eli.ColoringDiary.App</RootNamespace>
-    <AssemblyName>Eli.ColoringDiary.App</AssemblyName>
+    <ProjectGuid>{2D5135F4-20FC-47FA-AB57-EFC3211EC645}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Eli.ColoringDiary.FormsLibrary</RootNamespace>
+    <AssemblyName>Eli.ColoringDiary.FormsLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,52 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtSuppliesDialog.cs">
+    <Compile Include="CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ArtSuppliesDialog.Designer.cs">
-      <DependentUpon>ArtSuppliesDialog.cs</DependentUpon>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColoringBookDetailDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColoringBookDetailDialog.Designer.cs">
-      <DependentUpon>ColoringBookDetailDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ColoringBookDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColoringBookDialog.Designer.cs">
-      <DependentUpon>ColoringBookDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ColoringBookDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColoringBookDetail.Designer.cs">
-      <DependentUpon>ColoringBookDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ArtSuppliesDialog.resx">
-      <DependentUpon>ArtSuppliesDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColoringBookDetail.resx">
-      <DependentUpon>ColoringBookDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColoringBookDetailDialog.resx">
-      <DependentUpon>ColoringBookDetailDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColoringBookDialog.resx">
-      <DependentUpon>ColoringBookDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,25 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="coloringBookDetail.png" />
-    <Content Include="coloringDiary.png" />
-    <Content Include="coloringDiaryIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FormsLibrary\FormsLibrary.csproj">
-      <Project>{2D5135F4-20FC-47FA-AB57-EFC3211EC645}</Project>
-      <Name>FormsLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{92EA54BB-AEE8-4279-8CF3-A3F620BFE28F}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{CB1C77D7-D15F-44FC-8911-AB10C8B18B9A}</Project>
-      <Name>Repository</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using Eli.ColoringDiary.Repository;
+﻿using Eli.ColoringDiary.FormsLibrary;
+using Eli.ColoringDiary.Repository;
 using Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -105,7 +106,36 @@ namespace Eli.ColoringDiary.App
 
 		private void deleteSupplyBtn_Click(object sender, EventArgs e)
 		{
+			deleteArtSupply();
+		}
 
+		private void artSuppliesLv_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Delete)
+			{
+				deleteArtSupply();
+			}
+		}
+
+		private void deleteArtSupply()
+		{
+			var selected = artSuppliesLv.SelectedIndices;
+			if (selected.Count == 1)
+			{
+				var selectedIndex = selected[0];
+				var item = _artSupplyRepo.GetForEdit(_artSuppliesIds[selectedIndex]);
+				if (item == null)
+				{
+					return;
+				}
+				var dialog = new CustomMessageBox("Warning", $"Do you really want to delete {item.Name}?");
+				var result = dialog.ShowDialog();
+				if (result == DialogResult.OK)
+				{
+					_artSupplyRepo.Delete(_artSuppliesIds[selectedIndex]);
+					reloadArtSupplies();
+				}
+			}
 		}
 	}
 }
