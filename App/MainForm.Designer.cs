@@ -150,6 +150,7 @@
 			this.detailBookBtn.TabIndex = 3;
 			this.detailBookBtn.Text = "Detail";
 			this.detailBookBtn.UseVisualStyleBackColor = true;
+			this.detailBookBtn.Click += new System.EventHandler(this.detailBookBtn_Click);
 			// 
 			// deleteBookBtn
 			// 

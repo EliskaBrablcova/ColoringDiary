@@ -52,11 +52,11 @@
     <Compile Include="ArtSuppliesDialog.Designer.cs">
       <DependentUpon>ArtSuppliesDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColoringBookDetailDialog.cs">
+    <Compile Include="ColoringBookPageDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ColoringBookDetailDialog.Designer.cs">
-      <DependentUpon>ColoringBookDetailDialog.cs</DependentUpon>
+    <Compile Include="ColoringBookPageDialog.Designer.cs">
+      <DependentUpon>ColoringBookPageDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="ColoringBookDialog.cs">
       <SubType>Form</SubType>
@@ -84,8 +84,8 @@
     <EmbeddedResource Include="ColoringBookDetail.resx">
       <DependentUpon>ColoringBookDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ColoringBookDetailDialog.resx">
-      <DependentUpon>ColoringBookDetailDialog.cs</DependentUpon>
+    <EmbeddedResource Include="ColoringBookPageDialog.resx">
+      <DependentUpon>ColoringBookPageDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColoringBookDialog.resx">
       <DependentUpon>ColoringBookDialog.cs</DependentUpon>

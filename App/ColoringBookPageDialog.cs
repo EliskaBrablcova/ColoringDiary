@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Eli.ColoringDiary.App
 {
-	public partial class ColoringBookDetailDialog : Form
+	public partial class ColoringBookPageDialog : Form
 	{
-		public ColoringBookDetailDialog()
+		public ColoringBookPageDialog()
 		{
 			InitializeComponent();
 		}

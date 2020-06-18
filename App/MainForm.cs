@@ -92,7 +92,7 @@ namespace Eli.ColoringDiary.App
 				addRow(artSupply);
 			}
 		}
-		
+
 		private void addRow(ColoringBookVM coloringBook)
 		{
 			var texts = new[]
@@ -298,6 +298,22 @@ namespace Eli.ColoringDiary.App
 		{
 			deleteSupplyBtn.Enabled = enabled;
 			editSupplyBtn.Enabled = enabled;
+		}
+
+		private void detailBookBtn_Click(object sender, EventArgs e)
+		{
+			var selected = coloringBooksLv.SelectedIndices;
+			if (selected.Count == 1)
+			{
+				var selectedIndex = selected[0];
+				var item = _coloringBookRepo.GetForEdit(_coloringBooksIds[selectedIndex]);
+				if (item == null)
+				{
+					return;
+				}
+				new ColoringBookDetail(item).ShowDialog();
+				reloadColoringBooks();
+			}
 		}
 	}
 }

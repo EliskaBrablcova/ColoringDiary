@@ -1,6 +1,6 @@
 ﻿namespace Eli.ColoringDiary.App
 {
-	partial class ColoringBookDetailDialog
+	partial class ColoringBookPageDialog
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColoringBookDetailDialog));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColoringBookPageDialog));
 			this.coloringBookDetailDialogSaveBtn = new System.Windows.Forms.Button();
 			this.coloringBookDetailDialogCancelBtn = new System.Windows.Forms.Button();
 			this.coloringBookDetailDialogTlp = new System.Windows.Forms.TableLayoutPanel();
@@ -218,7 +218,7 @@
 			this.coloringBookDetailDialogArtSuplliesClb.Size = new System.Drawing.Size(322, 20);
 			this.coloringBookDetailDialogArtSuplliesClb.TabIndex = 11;
 			// 
-			// ColoringBookDetailDialog
+			// ColoringBookPageDialog
 			// 
 			this.AcceptButton = this.coloringBookDetailDialogSaveBtn;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,9 +231,9 @@
 			this.Controls.Add(this.coloringBookDetailDialogSaveBtn);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Name = "ColoringBookDetailDialog";
+			this.Name = "ColoringBookPageDialog";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "ColoringBookDetailDialog";
+			this.Text = "ColoringBookPageDialog";
 			this.coloringBookDetailDialogTlp.ResumeLayout(false);
 			this.coloringBookDetailDialogTlp.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.coloringBookDetailDialogPageNumberNud)).EndInit();
