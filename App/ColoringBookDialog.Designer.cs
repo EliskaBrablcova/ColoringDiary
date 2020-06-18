@@ -130,6 +130,7 @@
 			this.coloringBookDialogSaveBtn.TabIndex = 1;
 			this.coloringBookDialogSaveBtn.Text = "Save";
 			this.coloringBookDialogSaveBtn.UseVisualStyleBackColor = true;
+			this.coloringBookDialogSaveBtn.Click += new System.EventHandler(this.coloringBookDialogSaveBtn_Click);
 			// 
 			// coloringBookDialogCancelBtn
 			// 
@@ -159,6 +160,7 @@
 			this.Name = "ColoringBookDialog";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "ColoringBookDialog";
+			this.Load += new System.EventHandler(this.ColoringBookDialog_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.coloringBookDialogPagesTotalNud)).EndInit();

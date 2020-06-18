@@ -28,7 +28,7 @@ namespace Eli.ColoringDiary.App
 			}
 			else
 			{
-				Text = "Art Supply Addition";
+				Text = "Add new Art Supply";
 			}
 			if (types != null)
 			{
@@ -60,8 +60,8 @@ namespace Eli.ColoringDiary.App
 
 		private void artSuppliesDialogSaveBtn_Click(object sender, EventArgs e)
 		{
-			DialogResult = DialogResult.OK;
 			setItem();
+			DialogResult = DialogResult.OK;
 			Close();
 		}
 	}
