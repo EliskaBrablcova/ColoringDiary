@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models.Entities
+namespace Eli.ColoringDiary.Models.Entities
 {
 	public class ColoringBook
 	{

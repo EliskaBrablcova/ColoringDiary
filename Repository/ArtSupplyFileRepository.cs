@@ -1,5 +1,5 @@
-﻿using Models.Entities;
-using Models.ViewModels;
+﻿using Eli.ColoringDiary.Models.Entities;
+using Eli.ColoringDiary.Models.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -182,6 +182,5 @@ namespace Eli.ColoringDiary.Repository
 			}
 			return items[position.Value];
 		}
-
 	}
 }

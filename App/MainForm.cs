@@ -1,6 +1,6 @@
 ﻿using Eli.ColoringDiary.FormsLibrary;
 using Eli.ColoringDiary.Repository;
-using Models.ViewModels;
+using Eli.ColoringDiary.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

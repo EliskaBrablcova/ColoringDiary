@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models.ViewModels
+namespace Eli.ColoringDiary.Models.ViewModels
 {
 	public class ColoringBookVM
 	{

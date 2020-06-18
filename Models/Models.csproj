@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Eli.ColoringDiary.Models</AssemblyName>
+    <RootNamespace>Eli.ColoringDiary.Models</RootNamespace>
   </PropertyGroup>
 
 </Project>
