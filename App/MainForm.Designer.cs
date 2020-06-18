@@ -161,6 +161,7 @@
 			this.deleteBookBtn.TabIndex = 2;
 			this.deleteBookBtn.Text = "Delete";
 			this.deleteBookBtn.UseVisualStyleBackColor = true;
+			this.deleteBookBtn.Click += new System.EventHandler(this.deleteBookBtn_Click);
 			// 
 			// editBookBtn
 			// 
@@ -172,6 +173,7 @@
 			this.editBookBtn.TabIndex = 1;
 			this.editBookBtn.Text = "Edit";
 			this.editBookBtn.UseVisualStyleBackColor = true;
+			this.editBookBtn.Click += new System.EventHandler(this.editBookBtn_Click);
 			// 
 			// addNewBookBtn
 			// 
@@ -182,6 +184,7 @@
 			this.addNewBookBtn.TabIndex = 0;
 			this.addNewBookBtn.Text = "Add New";
 			this.addNewBookBtn.UseVisualStyleBackColor = true;
+			this.addNewBookBtn.Click += new System.EventHandler(this.addNewBookBtn_Click);
 			// 
 			// coloringBooksLv
 			// 
@@ -203,6 +206,8 @@
 			this.coloringBooksLv.TabIndex = 4;
 			this.coloringBooksLv.UseCompatibleStateImageBehavior = false;
 			this.coloringBooksLv.View = System.Windows.Forms.View.Details;
+			this.coloringBooksLv.SelectedIndexChanged += new System.EventHandler(this.coloringBooksLv_SelectedIndexChanged);
+			this.coloringBooksLv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.coloringBooksLv_KeyDown);
 			// 
 			// bookNameCh
 			// 

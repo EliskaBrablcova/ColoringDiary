@@ -17,11 +17,15 @@ namespace Eli.ColoringDiary.App
 	{
 		private IArtSupplyRepository _artSupplyRepo;
 		private IList<int> _artSuppliesIds;
+		private IColoringBookRepository _coloringBookRepo;
+		private IList<int> _coloringBooksIds;
 
 		public MainForm()
 		{
 			InitializeComponent();
 			_artSupplyRepo = new ArtSupplyFileRepository("data\\artSupplies.json");
+			_coloringBookRepo = new ColoringBookFileRepository("data\\coloringBooks.json");
+
 		}
 
 		private void MainForm_Load(object sender, EventArgs e)
@@ -32,6 +36,14 @@ namespace Eli.ColoringDiary.App
 		private void reloadAll()
 		{
 			reloadArtSupplies();
+			reloadColoringBooks();
+		}
+		private void reloadColoringBooks()
+		{
+			var coloringBooks = _coloringBookRepo.GetAll();
+			saveIds(coloringBooks);
+			display(coloringBooks);
+			setColoringBooksButtonStates();
 		}
 
 		private void reloadArtSupplies()
@@ -41,6 +53,17 @@ namespace Eli.ColoringDiary.App
 			display(artSupplies);
 			setArtSuppliesButtonStates();
 		}
+
+		private void saveIds(List<ColoringBookVM> coloringBooks)
+		{
+			var ids = new List<int>();
+			foreach (var coloringBook in coloringBooks)
+			{
+				ids.Add(coloringBook.ID);
+			}
+			_coloringBooksIds = ids;
+		}
+
 		private void saveIds(List<ArtSupplyVM> artSupplies)
 		{
 			var ids = new List<int>();
@@ -51,6 +74,16 @@ namespace Eli.ColoringDiary.App
 			_artSuppliesIds = ids;
 		}
 
+		private void display(List<ColoringBookVM> coloringBooks)
+		{
+			coloringBooksLv.Items.Clear();
+			foreach (var coloringBook in coloringBooks)
+			{
+				addRow(coloringBook);
+			}
+		}
+
+
 		private void display(List<ArtSupplyVM> artSupplies)
 		{
 			artSuppliesLv.Items.Clear();
@@ -58,6 +91,20 @@ namespace Eli.ColoringDiary.App
 			{
 				addRow(artSupply);
 			}
+		}
+		
+		private void addRow(ColoringBookVM coloringBook)
+		{
+			var texts = new[]
+			{
+				coloringBook.Name,
+				coloringBook.Author,
+				coloringBook.TotalPages.ToString(),
+				coloringBook.TotalPagesColored.ToString(),
+
+			};
+			var viewItem = new ListViewItem(texts);
+			coloringBooksLv.Items.Add(viewItem);
 		}
 
 		private void addRow(ArtSupplyVM artSupply)
@@ -73,6 +120,17 @@ namespace Eli.ColoringDiary.App
 			artSuppliesLv.Items.Add(viewItem);
 		}
 
+		private void addNewBookBtn_Click(object sender, EventArgs e)
+		{
+			var item = _coloringBookRepo.GetForAdd();
+			var dialog = new ColoringBookDialog(item, false);
+			if (dialog.ShowDialog() == DialogResult.OK)
+			{
+				_coloringBookRepo.Add(dialog.Item);
+				reloadColoringBooks();
+			}
+		}
+
 		private void addNewSupplyBtn_Click(object sender, EventArgs e)
 		{
 			var item = _artSupplyRepo.GetForAdd();
@@ -81,6 +139,27 @@ namespace Eli.ColoringDiary.App
 			{
 				_artSupplyRepo.Add(dialog.Item);
 				reloadArtSupplies();
+			}
+		}
+
+		private void editBookBtn_Click(object sender, EventArgs e)
+		{
+			var selected = coloringBooksLv.SelectedIndices;
+			if (selected.Count == 1)
+			{
+				var selectedIndex = selected[0];
+				var item = _coloringBookRepo.GetForEdit(_coloringBooksIds[selectedIndex]);
+				if (item == null)
+				{
+					return;
+				}
+				var dialog = new ColoringBookDialog(item, true);
+				var result = dialog.ShowDialog();
+				if (result == DialogResult.OK)
+				{
+					_coloringBookRepo.Edit(dialog.Item);
+					reloadColoringBooks();
+				}
 			}
 		}
 
@@ -105,9 +184,21 @@ namespace Eli.ColoringDiary.App
 			}
 		}
 
+		private void deleteBookBtn_Click(object sender, EventArgs e)
+		{
+			deleteColoringBook();
+		}
+
 		private void deleteSupplyBtn_Click(object sender, EventArgs e)
 		{
 			deleteArtSupply();
+		}
+		private void coloringBooksLv_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Delete)
+			{
+				deleteColoringBook();
+			}
 		}
 
 		private void artSuppliesLv_KeyDown(object sender, KeyEventArgs e)
@@ -115,6 +206,27 @@ namespace Eli.ColoringDiary.App
 			if (e.KeyCode == Keys.Delete)
 			{
 				deleteArtSupply();
+			}
+		}
+
+		private void deleteColoringBook()
+		{
+			var selected = coloringBooksLv.SelectedIndices;
+			if (selected.Count == 1)
+			{
+				var selectedIndex = selected[0];
+				var item = _coloringBookRepo.GetForEdit(_coloringBooksIds[selectedIndex]);
+				if (item == null)
+				{
+					return;
+				}
+				var dialog = new CustomMessageBox("Warning", $"Do you really want to delete {item.Name}?");
+				var result = dialog.ShowDialog();
+				if (result == DialogResult.OK)
+				{
+					_coloringBookRepo.Delete(_coloringBooksIds[selectedIndex]);
+					reloadColoringBooks();
+				}
 			}
 		}
 
@@ -139,6 +251,11 @@ namespace Eli.ColoringDiary.App
 			}
 		}
 
+		private void coloringBooksLv_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			setColoringBooksButtonStates();
+		}
+
 		private void artSuppliesLv_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			setArtSuppliesButtonStates();
@@ -155,6 +272,26 @@ namespace Eli.ColoringDiary.App
 			{
 				setArtSuppliesButtonStates(false);
 			}
+		}
+
+		private void setColoringBooksButtonStates()
+		{
+			var selected = coloringBooksLv.SelectedIndices;
+			if (selected.Count == 1)
+			{
+				setColoringBooksButtonStates(true);
+			}
+			else
+			{
+				setColoringBooksButtonStates(false);
+			}
+		}
+
+		private void setColoringBooksButtonStates(bool enabled)
+		{
+			deleteBookBtn.Enabled = enabled;
+			editBookBtn.Enabled = enabled;
+			detailBookBtn.Enabled = enabled;
 		}
 
 		private void setArtSuppliesButtonStates(bool enabled)
