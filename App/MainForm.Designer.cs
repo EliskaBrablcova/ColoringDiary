@@ -65,14 +65,22 @@
 			this.WIPNoteCh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.statisticsTP = new System.Windows.Forms.TabPage();
 			this.versionLbl = new System.Windows.Forms.Label();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.addNewTaskBtn = new System.Windows.Forms.Button();
+			this.editTaskBtn = new System.Windows.Forms.Button();
+			this.deleteTaskBtn = new System.Windows.Forms.Button();
+			this.completeTaskBtn = new System.Windows.Forms.Button();
+			this.plannerLv = new System.Windows.Forms.ListView();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.mainTC.SuspendLayout();
 			this.coloringBooksTP.SuspendLayout();
 			this.coloringBooksTlp.SuspendLayout();
 			this.artSuppliesTP.SuspendLayout();
 			this.artSuppliesTlp.SuspendLayout();
+			this.plannerTP.SuspendLayout();
 			this.wipTP.SuspendLayout();
 			this.WIPTlp.SuspendLayout();
+			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pictureBox1
@@ -81,8 +89,7 @@
 			this.pictureBox1.InitialImage = null;
 			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(250, 150);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.Size = new System.Drawing.Size(405, 100);
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -96,11 +103,11 @@
 			this.mainTC.Controls.Add(this.plannerTP);
 			this.mainTC.Controls.Add(this.wipTP);
 			this.mainTC.Controls.Add(this.statisticsTP);
-			this.mainTC.Location = new System.Drawing.Point(12, 168);
+			this.mainTC.Location = new System.Drawing.Point(12, 118);
 			this.mainTC.Multiline = true;
 			this.mainTC.Name = "mainTC";
 			this.mainTC.SelectedIndex = 0;
-			this.mainTC.Size = new System.Drawing.Size(621, 274);
+			this.mainTC.Size = new System.Drawing.Size(596, 247);
 			this.mainTC.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
 			this.mainTC.TabIndex = 2;
 			// 
@@ -110,7 +117,7 @@
 			this.coloringBooksTP.Location = new System.Drawing.Point(4, 22);
 			this.coloringBooksTP.Name = "coloringBooksTP";
 			this.coloringBooksTP.Padding = new System.Windows.Forms.Padding(3);
-			this.coloringBooksTP.Size = new System.Drawing.Size(613, 248);
+			this.coloringBooksTP.Size = new System.Drawing.Size(588, 221);
 			this.coloringBooksTP.TabIndex = 0;
 			this.coloringBooksTP.Text = "Coloring Books";
 			this.coloringBooksTP.UseVisualStyleBackColor = true;
@@ -137,7 +144,7 @@
 			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
 			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.coloringBooksTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.coloringBooksTlp.Size = new System.Drawing.Size(601, 236);
+			this.coloringBooksTlp.Size = new System.Drawing.Size(576, 209);
 			this.coloringBooksTlp.TabIndex = 0;
 			// 
 			// detailBookBtn
@@ -203,7 +210,7 @@
 			this.coloringBooksLv.MultiSelect = false;
 			this.coloringBooksLv.Name = "coloringBooksLv";
 			this.coloringBooksTlp.SetRowSpan(this.coloringBooksLv, 5);
-			this.coloringBooksLv.Size = new System.Drawing.Size(505, 230);
+			this.coloringBooksLv.Size = new System.Drawing.Size(480, 203);
 			this.coloringBooksLv.TabIndex = 4;
 			this.coloringBooksLv.UseCompatibleStateImageBehavior = false;
 			this.coloringBooksLv.View = System.Windows.Forms.View.Details;
@@ -236,7 +243,7 @@
 			this.artSuppliesTP.Location = new System.Drawing.Point(4, 22);
 			this.artSuppliesTP.Name = "artSuppliesTP";
 			this.artSuppliesTP.Padding = new System.Windows.Forms.Padding(3);
-			this.artSuppliesTP.Size = new System.Drawing.Size(613, 248);
+			this.artSuppliesTP.Size = new System.Drawing.Size(588, 221);
 			this.artSuppliesTP.TabIndex = 1;
 			this.artSuppliesTP.Text = "Art Supplies";
 			this.artSuppliesTP.UseVisualStyleBackColor = true;
@@ -261,7 +268,7 @@
 			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
 			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.artSuppliesTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.artSuppliesTlp.Size = new System.Drawing.Size(601, 236);
+			this.artSuppliesTlp.Size = new System.Drawing.Size(576, 209);
 			this.artSuppliesTlp.TabIndex = 0;
 			// 
 			// addNewSupplyBtn
@@ -314,7 +321,7 @@
 			this.artSuppliesLv.MultiSelect = false;
 			this.artSuppliesLv.Name = "artSuppliesLv";
 			this.artSuppliesTlp.SetRowSpan(this.artSuppliesLv, 4);
-			this.artSuppliesLv.Size = new System.Drawing.Size(505, 230);
+			this.artSuppliesLv.Size = new System.Drawing.Size(480, 203);
 			this.artSuppliesLv.TabIndex = 4;
 			this.artSuppliesLv.UseCompatibleStateImageBehavior = false;
 			this.artSuppliesLv.View = System.Windows.Forms.View.Details;
@@ -338,10 +345,11 @@
 			// 
 			// plannerTP
 			// 
+			this.plannerTP.Controls.Add(this.tableLayoutPanel1);
 			this.plannerTP.Location = new System.Drawing.Point(4, 22);
 			this.plannerTP.Name = "plannerTP";
 			this.plannerTP.Padding = new System.Windows.Forms.Padding(3);
-			this.plannerTP.Size = new System.Drawing.Size(613, 248);
+			this.plannerTP.Size = new System.Drawing.Size(588, 221);
 			this.plannerTP.TabIndex = 2;
 			this.plannerTP.Text = "Planner";
 			this.plannerTP.UseVisualStyleBackColor = true;
@@ -352,7 +360,7 @@
 			this.wipTP.Location = new System.Drawing.Point(4, 22);
 			this.wipTP.Name = "wipTP";
 			this.wipTP.Padding = new System.Windows.Forms.Padding(3);
-			this.wipTP.Size = new System.Drawing.Size(613, 248);
+			this.wipTP.Size = new System.Drawing.Size(588, 221);
 			this.wipTP.TabIndex = 4;
 			this.wipTP.Text = "WIP";
 			this.wipTP.UseVisualStyleBackColor = true;
@@ -376,7 +384,7 @@
 			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
 			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.WIPTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.WIPTlp.Size = new System.Drawing.Size(601, 236);
+			this.WIPTlp.Size = new System.Drawing.Size(576, 209);
 			this.WIPTlp.TabIndex = 1;
 			// 
 			// editWIPBtn
@@ -419,7 +427,7 @@
 			this.WIPLv.MultiSelect = false;
 			this.WIPLv.Name = "WIPLv";
 			this.WIPTlp.SetRowSpan(this.WIPLv, 4);
-			this.WIPLv.Size = new System.Drawing.Size(505, 230);
+			this.WIPLv.Size = new System.Drawing.Size(480, 203);
 			this.WIPLv.TabIndex = 4;
 			this.WIPLv.UseCompatibleStateImageBehavior = false;
 			this.WIPLv.View = System.Windows.Forms.View.Details;
@@ -455,7 +463,7 @@
 			this.statisticsTP.Location = new System.Drawing.Point(4, 22);
 			this.statisticsTP.Name = "statisticsTP";
 			this.statisticsTP.Padding = new System.Windows.Forms.Padding(3);
-			this.statisticsTP.Size = new System.Drawing.Size(613, 248);
+			this.statisticsTP.Size = new System.Drawing.Size(588, 221);
 			this.statisticsTP.TabIndex = 3;
 			this.statisticsTP.Text = "Statistics";
 			this.statisticsTP.UseVisualStyleBackColor = true;
@@ -464,17 +472,102 @@
 			// 
 			this.versionLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.versionLbl.AutoSize = true;
-			this.versionLbl.Location = new System.Drawing.Point(602, 446);
+			this.versionLbl.Location = new System.Drawing.Point(580, 368);
 			this.versionLbl.Name = "versionLbl";
 			this.versionLbl.Size = new System.Drawing.Size(28, 13);
 			this.versionLbl.TabIndex = 3;
 			this.versionLbl.Text = "v0.1";
 			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tableLayoutPanel1.ColumnCount = 2;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel1.Controls.Add(this.completeTaskBtn, 0, 3);
+			this.tableLayoutPanel1.Controls.Add(this.deleteTaskBtn, 0, 2);
+			this.tableLayoutPanel1.Controls.Add(this.editTaskBtn, 0, 1);
+			this.tableLayoutPanel1.Controls.Add(this.addNewTaskBtn, 0, 0);
+			this.tableLayoutPanel1.Controls.Add(this.plannerLv, 1, 0);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 5;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(576, 209);
+			this.tableLayoutPanel1.TabIndex = 0;
+			// 
+			// addNewTaskBtn
+			// 
+			this.addNewTaskBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.addNewTaskBtn.Location = new System.Drawing.Point(3, 3);
+			this.addNewTaskBtn.Name = "addNewTaskBtn";
+			this.addNewTaskBtn.Size = new System.Drawing.Size(84, 19);
+			this.addNewTaskBtn.TabIndex = 2;
+			this.addNewTaskBtn.Text = "Add New";
+			this.addNewTaskBtn.UseVisualStyleBackColor = true;
+			// 
+			// editTaskBtn
+			// 
+			this.editTaskBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.editTaskBtn.Enabled = false;
+			this.editTaskBtn.Location = new System.Drawing.Point(3, 28);
+			this.editTaskBtn.Name = "editTaskBtn";
+			this.editTaskBtn.Size = new System.Drawing.Size(84, 19);
+			this.editTaskBtn.TabIndex = 3;
+			this.editTaskBtn.Text = "Edit";
+			this.editTaskBtn.UseVisualStyleBackColor = true;
+			// 
+			// deleteTaskBtn
+			// 
+			this.deleteTaskBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.deleteTaskBtn.Enabled = false;
+			this.deleteTaskBtn.Location = new System.Drawing.Point(3, 53);
+			this.deleteTaskBtn.Name = "deleteTaskBtn";
+			this.deleteTaskBtn.Size = new System.Drawing.Size(84, 19);
+			this.deleteTaskBtn.TabIndex = 4;
+			this.deleteTaskBtn.Text = "Delete";
+			this.deleteTaskBtn.UseVisualStyleBackColor = true;
+			// 
+			// completeTaskBtn
+			// 
+			this.completeTaskBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.completeTaskBtn.Enabled = false;
+			this.completeTaskBtn.Location = new System.Drawing.Point(3, 78);
+			this.completeTaskBtn.Name = "completeTaskBtn";
+			this.completeTaskBtn.Size = new System.Drawing.Size(84, 19);
+			this.completeTaskBtn.TabIndex = 5;
+			this.completeTaskBtn.Text = "Complete";
+			this.completeTaskBtn.UseVisualStyleBackColor = true;
+			// 
+			// plannerLv
+			// 
+			this.plannerLv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.plannerLv.FullRowSelect = true;
+			this.plannerLv.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+			this.plannerLv.HideSelection = false;
+			this.plannerLv.Location = new System.Drawing.Point(93, 3);
+			this.plannerLv.MultiSelect = false;
+			this.plannerLv.Name = "plannerLv";
+			this.tableLayoutPanel1.SetRowSpan(this.plannerLv, 5);
+			this.plannerLv.Size = new System.Drawing.Size(480, 203);
+			this.plannerLv.TabIndex = 6;
+			this.plannerLv.UseCompatibleStateImageBehavior = false;
+			this.plannerLv.View = System.Windows.Forms.View.Details;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(645, 469);
+			this.ClientSize = new System.Drawing.Size(620, 390);
 			this.Controls.Add(this.versionLbl);
 			this.Controls.Add(this.mainTC);
 			this.Controls.Add(this.pictureBox1);
@@ -489,8 +582,10 @@
 			this.coloringBooksTlp.ResumeLayout(false);
 			this.artSuppliesTP.ResumeLayout(false);
 			this.artSuppliesTlp.ResumeLayout(false);
+			this.plannerTP.ResumeLayout(false);
 			this.wipTP.ResumeLayout(false);
 			this.WIPTlp.ResumeLayout(false);
+			this.tableLayoutPanel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -534,6 +629,12 @@
 		private System.Windows.Forms.ColumnHeader WIPPageDescriptionCh;
 		private System.Windows.Forms.ColumnHeader WITStartDateCh;
 		private System.Windows.Forms.ColumnHeader WIPNoteCh;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.Button completeTaskBtn;
+		private System.Windows.Forms.Button deleteTaskBtn;
+		private System.Windows.Forms.Button editTaskBtn;
+		private System.Windows.Forms.Button addNewTaskBtn;
+		private System.Windows.Forms.ListView plannerLv;
 	}
 }
 
