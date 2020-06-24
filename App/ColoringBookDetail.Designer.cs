@@ -83,6 +83,7 @@
 			this.coloringBookDetailDeletePageBtn.TabIndex = 7;
 			this.coloringBookDetailDeletePageBtn.Text = "Delete Page";
 			this.coloringBookDetailDeletePageBtn.UseVisualStyleBackColor = true;
+			this.coloringBookDetailDeletePageBtn.Click += new System.EventHandler(this.coloringBookDetailDeletePageBtn_Click);
 			// 
 			// coloringBookDetailEditPageBtn
 			// 
@@ -93,6 +94,7 @@
 			this.coloringBookDetailEditPageBtn.TabIndex = 6;
 			this.coloringBookDetailEditPageBtn.Text = "Edit Page";
 			this.coloringBookDetailEditPageBtn.UseVisualStyleBackColor = true;
+			this.coloringBookDetailEditPageBtn.Click += new System.EventHandler(this.coloringBookDetailEditPageBtn_Click);
 			// 
 			// coloringBookDetailBookAuthorLbl
 			// 
@@ -149,6 +151,8 @@
 			this.coloringBookDetailLv.TabIndex = 4;
 			this.coloringBookDetailLv.UseCompatibleStateImageBehavior = false;
 			this.coloringBookDetailLv.View = System.Windows.Forms.View.Details;
+			this.coloringBookDetailLv.SelectedIndexChanged += new System.EventHandler(this.coloringBookDetailLv_SelectedIndexChanged);
+			this.coloringBookDetailLv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.coloringBookDetailLv_KeyDown);
 			// 
 			// coloringBookDetailPageNumberCh
 			// 
@@ -192,6 +196,7 @@
 			this.coloringBookDetailAddNewPageBtn.TabIndex = 5;
 			this.coloringBookDetailAddNewPageBtn.Text = "Add New Page";
 			this.coloringBookDetailAddNewPageBtn.UseVisualStyleBackColor = true;
+			this.coloringBookDetailAddNewPageBtn.Click += new System.EventHandler(this.coloringBookDetailAddNewPageBtn_Click);
 			// 
 			// ColoringBookDetail
 			// 
@@ -204,6 +209,7 @@
 			this.Name = "ColoringBookDetail";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "ColoringBookDetail";
+			this.Load += new System.EventHandler(this.ColoringBookDetail_Load);
 			this.coloringBookDetailTlp.ResumeLayout(false);
 			this.coloringBookDetailTlp.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
