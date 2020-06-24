@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColoringBookDialog));
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.coloringBookDialogNameLbl = new System.Windows.Forms.Label();
 			this.coloringBookDialogAuthorLbl = new System.Windows.Forms.Label();
@@ -161,6 +162,7 @@
 			this.Controls.Add(this.coloringBookDialogSaveBtn);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(366, 170);
 			this.Name = "ColoringBookDialog";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
