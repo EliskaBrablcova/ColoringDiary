@@ -53,7 +53,7 @@ namespace Eli.ColoringDiary.App
 
 		private void reloadColoringBookPages()
 		{
-			var coloringBookPages = _coloringBookPageRepo.GetAll();
+			var coloringBookPages = _coloringBookPageRepo.GetAll(_coloringBookId);
 			saveIds(coloringBookPages);
 			display(coloringBookPages);
 			setColoringBookPagesButtonStates();
@@ -114,7 +114,7 @@ namespace Eli.ColoringDiary.App
 
 		private void coloringBookDetailAddNewPageBtn_Click(object sender, EventArgs e)
 		{
-			var item = _coloringBookPageRepo.GetForAdd();
+			var item = _coloringBookPageRepo.GetForAdd(_coloringBookId);
 			var dialog = new ColoringBookPageDialog(item, false);
 			if (dialog.ShowDialog() == DialogResult.OK)
 			{

@@ -11,8 +11,8 @@ namespace Eli.ColoringDiary.Repository
 		void Add(ColoringBookPage coloringBookPage);
 		void Edit(ColoringBookPage coloringBookPage);
 		void Delete(int id);
-		List<ColoringBookPageVM> GetAll();
-		ColoringBookPage GetForAdd();
+		List<ColoringBookPageVM> GetAll(int coloringBookId);
+		ColoringBookPage GetForAdd(int coloringBookId);
 		ColoringBookPage GetForEdit(int id);
 	}
 }

@@ -61,12 +61,16 @@ namespace Eli.ColoringDiary.Repository
 			}
 		}
 
-		public List<ColoringBookPageVM> GetAll()
+		public List<ColoringBookPageVM> GetAll(int coloringBookId)
 		{
 			var items = readFromFileOrdered();
 			var result = new List<ColoringBookPageVM>();
 			foreach (var item in items)
 			{
+				if (item.BookID != coloringBookId)
+				{
+					continue;
+				}
 				var coloringBookPage = new ColoringBookPageVM
 				{
 					PageNumber = item.PageNumber,
@@ -82,9 +86,25 @@ namespace Eli.ColoringDiary.Repository
 			return result;
 		}
 
-		public ColoringBookPage GetForAdd()
+		public ColoringBookPage GetForAdd(int coloringBookId)
 		{
-			return new ColoringBookPage();
+			var coloringBookPage = new ColoringBookPage();
+			coloringBookPage.BookID = coloringBookId;
+			coloringBookPage.PageNumber = getNewPageNbr(coloringBookId);
+			return coloringBookPage;
+		}
+
+		private int getNewPageNbr(int coloringBookId)
+		{
+			var pageNbr = 0;
+			foreach (var page in readFromFile())
+			{
+				if (page.BookID == coloringBookId && page.PageNumber > pageNbr)
+				{
+					pageNbr = page.PageNumber;
+				}
+			}
+			return pageNbr + 1;
 		}
 
 		public ColoringBookPage GetForEdit(int id)
