@@ -126,9 +126,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="coloringBookDetail %282%29.png" />
     <Content Include="coloringBookDetailNew.png" />
-    <Content Include="coloringDiaryIcon.ico" />
     <Content Include="coloringDiaryNew.png" />
     <Content Include="IconNew.ico" />
   </ItemGroup>
