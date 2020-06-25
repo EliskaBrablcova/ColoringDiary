@@ -19,12 +19,14 @@ namespace Eli.ColoringDiary.App
 		private IList<int> _artSuppliesIds;
 		private IColoringBookRepository _coloringBookRepo;
 		private IList<int> _coloringBooksIds;
+		private IColoringBookPageRepository _coloringBookPageRepo;
 
 		public MainForm()
 		{
 			InitializeComponent();
 			_artSupplyRepo = new ArtSupplyFileRepository("data\\artSupplies.json");
 			_coloringBookRepo = new ColoringBookFileRepository("data\\coloringBooks.json");
+			_coloringBookPageRepo = new ColoringBookPageFileRepository("data\\coloringBookPages.json");
 
 		}
 
@@ -311,7 +313,7 @@ namespace Eli.ColoringDiary.App
 				{
 					return;
 				}
-				new ColoringBookDetail(item).ShowDialog();
+				new ColoringBookDetail(item.ID, _coloringBookRepo, _coloringBookPageRepo).ShowDialog();
 				reloadColoringBooks();
 			}
 		}

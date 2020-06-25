@@ -18,13 +18,27 @@ namespace Eli.ColoringDiary.App
 	{
 
 		private IColoringBookPageRepository _coloringBookPageRepo;
-		private IList<int> _coloringBookPageIds; 
-		public ColoringBookDetail(ColoringBook coloringBook)
+		private IColoringBookRepository _coloringBookRepo;
+		private IList<int> _coloringBookPageIds;
+		private int _coloringBookId;
+
+		public ColoringBookDetail(int coloringBookId, IColoringBookRepository coloringBookRepo, IColoringBookPageRepository coloringBookPageRepo)
 		{
 			InitializeComponent();
+			if (coloringBookRepo == null)
+			{
+				throw new ArgumentNullException(nameof(coloringBookRepo));
+			}
+			if (coloringBookPageRepo == null)
+			{
+				throw new ArgumentNullException(nameof(coloringBookPageRepo));
+			}
+			_coloringBookRepo = coloringBookRepo;
+			_coloringBookPageRepo = coloringBookPageRepo;
+			var coloringBook = _coloringBookRepo.GetForEdit(coloringBookId);
 			if (coloringBook == null)
 			{
-				throw new ArgumentNullException(nameof(coloringBook));
+				throw new ArgumentException("Book does not exist.", nameof(coloringBookId));
 			}
 			_coloringBookId = coloringBook.ID;
 			coloringBookDetailBookNameLbl.Text = coloringBook.Name;
@@ -120,7 +134,7 @@ namespace Eli.ColoringDiary.App
 				{
 					return;
 				}
-				var dialog = new ColoringBookDialog(item, true);
+				var dialog = new ColoringBookPageDialog(item, true);
 				var result = dialog.ShowDialog();
 				if (result == DialogResult.OK)
 				{
