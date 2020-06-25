@@ -49,8 +49,8 @@ namespace Eli.ColoringDiary.App
 			Item.PageNumber = (int)coloringBookDetailDialogPageNumberNud.Value;
 			Item.PageDescription = coloringBookDetailDialogPageDescriptionTB.Text;
 			Item.Note = coloringBookDetailDialogNoteTB.Text;
-			Item.StartDate = coloringBookDetailDialogStartDateDtp.Value;
-			Item.FinishDate = coloringBookDetailDialogFinishDateDtp.Value;
+			Item.StartDate = coloringBookDetailDialogStartDateDtp.Value.Date;
+			Item.FinishDate = coloringBookDetailDialogFinishDateDtp.Value.Date;
 			//Item.ArtSuppliesUsed = coloringBookDetailDialogArtSuplliesClb.Items;
 		}
 

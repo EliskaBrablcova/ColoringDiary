@@ -141,13 +141,15 @@
 			this.coloringBookDetailLv.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.coloringBookDetailPageNumberCh,
             this.coloringBookDetailPageDescriptionCh,
+            this.coloringBookDetailNoteCh,
             this.coloringBookDetailStartDateCh,
             this.coloringBookDetailFinishDateCh,
-            this.coloringBookDetailArtSuppliesUsedCh,
-            this.coloringBookDetailNoteCh});
+            this.coloringBookDetailArtSuppliesUsedCh});
 			this.coloringBookDetailTlp.SetColumnSpan(this.coloringBookDetailLv, 2);
+			this.coloringBookDetailLv.FullRowSelect = true;
 			this.coloringBookDetailLv.HideSelection = false;
 			this.coloringBookDetailLv.Location = new System.Drawing.Point(93, 103);
+			this.coloringBookDetailLv.MultiSelect = false;
 			this.coloringBookDetailLv.Name = "coloringBookDetailLv";
 			this.coloringBookDetailTlp.SetRowSpan(this.coloringBookDetailLv, 4);
 			this.coloringBookDetailLv.Size = new System.Drawing.Size(534, 187);
