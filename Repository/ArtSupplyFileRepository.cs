@@ -132,11 +132,19 @@ namespace Eli.ColoringDiary.Repository
 		}
 		private List<ArtSupply> readFromFile()
 		{
-			//TODO toto Eli ještě neviděla
+			ensureCreated();
 			using (var sr = new StreamReader(_fileName))
 			{
 				return JsonConvert.DeserializeObject<List<ArtSupply>>(sr.ReadToEnd());
 			}
+		}
+
+		private void ensureCreated()
+		{
+			if (!File.Exists(_fileName))
+			{
+				saveToFile(new List<ArtSupply>());
+			}		
 		}
 
 		private void saveToFile(List<ArtSupply> items)

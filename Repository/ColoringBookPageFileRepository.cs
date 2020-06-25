@@ -95,6 +95,7 @@ namespace Eli.ColoringDiary.Repository
 
 		private List<ColoringBookPage> readFromFile()
 		{
+			ensureCreated();
 			using (var sr = new StreamReader(_fileName))
 			{
 				return JsonConvert.DeserializeObject<List<ColoringBookPage>>(sr.ReadToEnd());
@@ -107,6 +108,13 @@ namespace Eli.ColoringDiary.Repository
 			return items.OrderBy(c => c.PageNumber).ThenBy(c => c.ID).ToList();
 		}
 
+		private void ensureCreated()
+		{
+			if (!File.Exists(_fileName))
+			{
+				saveToFile(new List<ColoringBookPage>());
+			}
+		}
 
 		private void saveToFile(List<ColoringBookPage> items)
 		{
