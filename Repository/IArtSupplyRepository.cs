@@ -16,5 +16,6 @@ namespace Eli.ColoringDiary.Repository
 		ArtSupply GetForAdd();
 		ArtSupply GetForEdit(int id);
 		List<string> GetAllTypes();
+		List<ArtSupplyVM> Get(IEnumerable<int> ids);
 	}
 }

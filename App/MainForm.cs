@@ -26,7 +26,7 @@ namespace Eli.ColoringDiary.App
 			InitializeComponent();
 			_artSupplyRepo = new ArtSupplyFileRepository("data\\artSupplies.json");
 			_coloringBookRepo = new ColoringBookFileRepository("data\\coloringBooks.json");
-			_coloringBookPageRepo = new ColoringBookPageFileRepository("data\\coloringBookPages.json");
+			_coloringBookPageRepo = new ColoringBookPageFileRepository("data\\coloringBookPages.json", _artSupplyRepo);
 
 		}
 

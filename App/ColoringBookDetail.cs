@@ -87,7 +87,7 @@ namespace Eli.ColoringDiary.App
 				coloringBookPage.Note,
 				coloringBookPage.StartDate.ToString(),
 				coloringBookPage.FinishDate.ToString(),
-				//coloringBookPage.ArtSuppliesUsed,
+				string.Join(", ", coloringBookPage.ArtSuppliesUsed),
 			};
 			var viewItem = new ListViewItem(texts);
 			coloringBookDetailLv.Items.Add(viewItem);

@@ -101,8 +101,8 @@ namespace Eli.ColoringDiary.Repository
 					result.Add(item.Type);
 				}
 			}
-			var defaults = new List<string> 
-			{   
+			var defaults = new List<string>
+			{
 				"Pencils",
 				"Watercolor pencils",
 				"Watercolors",
@@ -111,7 +111,7 @@ namespace Eli.ColoringDiary.Repository
 				"Fineliners",
 				"Crayons",
 				"Gel pens",
-				
+
 			};
 			foreach (var item in defaults)
 			{
@@ -122,6 +122,28 @@ namespace Eli.ColoringDiary.Repository
 				}
 			}
 			result.Sort();
+			return result;
+		}
+
+		public List<ArtSupplyVM> Get(IEnumerable<int> ids)
+		{
+			var items = readFromFile();
+			var result = new List<ArtSupplyVM>();
+			foreach (var item in items)
+			{
+				if (!ids.Contains(item.ID))
+				{
+					continue;
+				}
+				var artSupply = new ArtSupplyVM
+				{
+					ID = item.ID,
+					Name = item.Name,
+					Brand = item.Brand,
+					Type = item.Type,
+				};
+				result.Add(artSupply);
+			}
 			return result;
 		}
 
@@ -144,7 +166,7 @@ namespace Eli.ColoringDiary.Repository
 			if (!File.Exists(_fileName))
 			{
 				saveToFile(new List<ArtSupply>());
-			}		
+			}
 		}
 
 		private void saveToFile(List<ArtSupply> items)
@@ -180,7 +202,7 @@ namespace Eli.ColoringDiary.Repository
 			}
 			return null;
 		}
-		
+
 		private ArtSupply getItemById(List<ArtSupply> items, int id)
 		{
 			var position = getPositionById(items, id);

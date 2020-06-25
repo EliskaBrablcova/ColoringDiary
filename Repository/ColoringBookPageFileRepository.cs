@@ -12,14 +12,21 @@ namespace Eli.ColoringDiary.Repository
 	public class ColoringBookPageFileRepository : IColoringBookPageRepository
 	{
 		private string _fileName;
+		private IArtSupplyRepository _artSupplyRepo;
 
-		public ColoringBookPageFileRepository(string fileName)
+		public ColoringBookPageFileRepository(string fileName, IArtSupplyRepository artSupplyRepo)
 		{
 			if (fileName == null)
 			{
 				throw new ArgumentNullException(nameof(fileName));
 			}
 			_fileName = fileName;
+
+			if (artSupplyRepo == null)
+			{
+				throw new ArgumentNullException(nameof(artSupplyRepo));
+			}
+			_artSupplyRepo = artSupplyRepo;
 		}
 
 		public void Add(ColoringBookPage coloringBookPage)
@@ -78,12 +85,23 @@ namespace Eli.ColoringDiary.Repository
 					Note = item.Note,
 					StartDate = item.StartDate,
 					FinishDate = item.FinishDate,
-					//ArtSuppliesUsed = item.ArtSuppliesUsed,
+					ArtSuppliesUsed = getArtSuppliesNames(item.ArtSuppliesUsed),
 
 				};
 				result.Add(coloringBookPage);
 			}
 			return result;
+		}
+
+		private List<string> getArtSuppliesNames(List<int> artSuppliesUsed)
+		{
+			var names = new List<string>();
+			foreach (var artSupply in _artSupplyRepo.Get(artSuppliesUsed))
+			{
+				names.Add(artSupply.Name);
+			}
+			names.Sort();
+			return names;
 		}
 
 		public ColoringBookPage GetForAdd(int coloringBookId)
