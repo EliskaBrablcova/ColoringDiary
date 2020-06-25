@@ -222,11 +222,17 @@ namespace Eli.ColoringDiary.App
 				{
 					return;
 				}
-				var dialog = new CustomMessageBox("Warning", $"Do you really want to delete {item.Name}?");
+				var text = $"Do you really want to delete {item.Name}?";
+				if (_coloringBookPageRepo.HasPages(item.ID))
+				{
+					text += " It contains pages!";
+				}
+				var dialog = new CustomMessageBox("Warning", text);
 				var result = dialog.ShowDialog();
 				if (result == DialogResult.OK)
 				{
-					_coloringBookRepo.Delete(_coloringBooksIds[selectedIndex]);
+					_coloringBookPageRepo.DeleteAllPages(item.ID);
+					_coloringBookRepo.Delete(item.ID);
 					reloadColoringBooks();
 				}
 			}

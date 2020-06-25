@@ -113,6 +113,33 @@ namespace Eli.ColoringDiary.Repository
 			return getItemById(items, id);
 		}
 
+		public bool HasPages(int coloringBookId)
+		{
+			var items = readFromFile();
+			foreach (var page in items)
+			{
+				if (page.BookID == coloringBookId)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		public void DeleteAllPages(int coloringBookId)
+		{
+			var oldItems = readFromFile();
+			var newItems = new List<ColoringBookPage>(oldItems.Count);
+			foreach (var page in oldItems)
+			{
+				if (page.BookID != coloringBookId)
+				{
+					newItems.Add(page);
+				}
+			}
+			saveToFile(newItems);
+		}
+
 		private List<ColoringBookPage> readFromFile()
 		{
 			ensureCreated();
@@ -179,5 +206,6 @@ namespace Eli.ColoringDiary.Repository
 			}
 			return items[position.Value];
 		}
+
 	}
 }
