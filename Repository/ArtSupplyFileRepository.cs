@@ -127,6 +127,10 @@ namespace Eli.ColoringDiary.Repository
 
 		public List<ArtSupplyVM> Get(IEnumerable<int> ids)
 		{
+			if (ids == null)
+			{
+				return new List<ArtSupplyVM>();
+			}
 			var items = readFromFile();
 			var result = new List<ArtSupplyVM>();
 			foreach (var item in items)
