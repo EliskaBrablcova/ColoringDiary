@@ -11,6 +11,6 @@ namespace Eli.ColoringDiary.Models.ViewModels
 		public string Author { get; set; }
 		public int TotalPages { get; set; }
 		public int TotalPagesColored { get; set; }
-
+		public double TotalPagesColoredPercent { get; set; }
 	}
 }

@@ -25,8 +25,8 @@ namespace Eli.ColoringDiary.App
 		{
 			InitializeComponent();
 			_artSupplyRepo = new ArtSupplyFileRepository("data\\artSupplies.json");
-			_coloringBookRepo = new ColoringBookFileRepository("data\\coloringBooks.json");
 			_coloringBookPageRepo = new ColoringBookPageFileRepository("data\\coloringBookPages.json", _artSupplyRepo);
+			_coloringBookRepo = new ColoringBookFileRepository("data\\coloringBooks.json", _coloringBookPageRepo);
 
 		}
 
@@ -102,7 +102,7 @@ namespace Eli.ColoringDiary.App
 				coloringBook.Name,
 				coloringBook.Author,
 				coloringBook.TotalPages.ToString(),
-				coloringBook.TotalPagesColored.ToString(),
+				$"{coloringBook.TotalPagesColored} ({coloringBook.TotalPagesColoredPercent:#,##0.##} %)",
 
 			};
 			var viewItem = new ListViewItem(texts);

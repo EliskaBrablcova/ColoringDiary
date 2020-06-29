@@ -12,14 +12,20 @@ namespace Eli.ColoringDiary.Repository
 	public class ColoringBookFileRepository : IColoringBookRepository
 	{
 		private string _fileName;
+		private IColoringBookPageRepository _coloringBookPageRepo;
 
-		public ColoringBookFileRepository(string fileName)
+		public ColoringBookFileRepository(string fileName, IColoringBookPageRepository coloringBookPageRepo)
 		{
 			if (fileName == null)
 			{
 				throw new ArgumentNullException(nameof(fileName));
 			}
+			if (coloringBookPageRepo == null)
+			{
+				throw new ArgumentNullException(nameof(coloringBookPageRepo));
+			}
 			_fileName = fileName;
+			_coloringBookPageRepo = coloringBookPageRepo;
 		}
 
 		public void Add(ColoringBook coloringBook)
@@ -71,9 +77,12 @@ namespace Eli.ColoringDiary.Repository
 					Name = item.Name,
 					Author = item.Author,
 					TotalPages = item.TotalPages,
-					TotalPagesColored = 0, //todo
-
+					//nevýkonné - opakované načítání souborů
+					TotalPagesColored = getColoredPagesCount(item.ID),
 				};
+				coloringBook.TotalPagesColoredPercent = coloringBook.TotalPages > 0
+					? 100.0 * coloringBook.TotalPagesColored / coloringBook.TotalPages
+					: 0;
 				result.Add(coloringBook);
 			}
 			return result;
@@ -157,5 +166,21 @@ namespace Eli.ColoringDiary.Repository
 			return items[position.Value];
 		}
 
+		private int getColoredPagesCount(int bookId)
+		{
+			var coloredPagesCount = 0;
+			var pages = _coloringBookPageRepo.GetAll(bookId);
+			if (pages != null)
+			{
+				foreach (var page in pages)
+				{
+					if (page.FinishDate != null)
+					{
+						coloredPagesCount++;
+					}
+				}
+			}
+			return coloredPagesCount;
+		}
 	}
 }
