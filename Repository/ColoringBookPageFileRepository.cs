@@ -80,6 +80,7 @@ namespace Eli.ColoringDiary.Repository
 				}
 				var coloringBookPage = new ColoringBookPageVM
 				{
+					ID = item.ID,
 					PageNumber = item.PageNumber,
 					PageDescription = item.PageDescription,
 					Note = item.Note,
