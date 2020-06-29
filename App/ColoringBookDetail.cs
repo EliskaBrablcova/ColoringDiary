@@ -19,10 +19,12 @@ namespace Eli.ColoringDiary.App
 
 		private IColoringBookPageRepository _coloringBookPageRepo;
 		private IColoringBookRepository _coloringBookRepo;
+		private IArtSupplyRepository _artSupplyRepo;
 		private IList<int> _coloringBookPageIds;
 		private int _coloringBookId;
 
-		public ColoringBookDetail(int coloringBookId, IColoringBookRepository coloringBookRepo, IColoringBookPageRepository coloringBookPageRepo)
+		public ColoringBookDetail(int coloringBookId, IColoringBookRepository coloringBookRepo, IColoringBookPageRepository coloringBookPageRepo, 
+			IArtSupplyRepository artSupplyRepo)
 		{
 			InitializeComponent();
 			if (coloringBookRepo == null)
@@ -33,8 +35,13 @@ namespace Eli.ColoringDiary.App
 			{
 				throw new ArgumentNullException(nameof(coloringBookPageRepo));
 			}
+			if (artSupplyRepo == null)
+			{
+				throw new ArgumentNullException(nameof(artSupplyRepo));
+			}
 			_coloringBookRepo = coloringBookRepo;
 			_coloringBookPageRepo = coloringBookPageRepo;
+			_artSupplyRepo = artSupplyRepo;
 			var coloringBook = _coloringBookRepo.GetForEdit(coloringBookId);
 			if (coloringBook == null)
 			{
@@ -115,7 +122,7 @@ namespace Eli.ColoringDiary.App
 		private void coloringBookDetailAddNewPageBtn_Click(object sender, EventArgs e)
 		{
 			var item = _coloringBookPageRepo.GetForAdd(_coloringBookId);
-			var dialog = new ColoringBookPageDialog(item, false);
+			var dialog = new ColoringBookPageDialog(item, false, _artSupplyRepo.GetAll());
 			if (dialog.ShowDialog() == DialogResult.OK)
 			{
 				_coloringBookPageRepo.Add(dialog.Item);
@@ -134,7 +141,7 @@ namespace Eli.ColoringDiary.App
 				{
 					return;
 				}
-				var dialog = new ColoringBookPageDialog(item, true);
+				var dialog = new ColoringBookPageDialog(item, true, _artSupplyRepo.GetAll());
 				var result = dialog.ShowDialog();
 				if (result == DialogResult.OK)
 				{

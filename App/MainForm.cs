@@ -319,7 +319,7 @@ namespace Eli.ColoringDiary.App
 				{
 					return;
 				}
-				new ColoringBookDetail(item.ID, _coloringBookRepo, _coloringBookPageRepo).ShowDialog();
+				new ColoringBookDetail(item.ID, _coloringBookRepo, _coloringBookPageRepo, _artSupplyRepo).ShowDialog();
 				reloadColoringBooks();
 			}
 		}
